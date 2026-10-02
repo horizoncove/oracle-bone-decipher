@@ -1,0 +1,6 @@
+glyph_id: OBD-000001
+example: true
+period_group: unknown
+group_restricted: false
+distribution_note: "示例分布说明，不是分期分组判定"
+entered_by: example-recorder

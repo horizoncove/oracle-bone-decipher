@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/registry/schema/id-ledger.schema.json",
+  "title": "Glyph ID ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["allocations"],
+  "properties": {
+    "allocations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "glyph_id",
+          "issued_to",
+          "issued_at",
+          "state",
+          "source_note",
+          "description",
+          "duplicate_checked_by"
+        ],
+        "properties": {
+          "glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+          "issued_to": {"type": "string", "minLength": 1},
+          "issued_at": {"type": "string", "minLength": 10},
+          "state": {"type": "string", "enum": ["pending", "used", "abandoned"]},
+          "source_note": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1},
+          "duplicate_checked_by": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/registry/schema/crosswalk.schema.json",
+  "title": "External head crosswalk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["glyph_id", "mappings"],
+  "properties": {
+    "glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target", "source", "status"],
+        "properties": {
+          "target": {"type": "string", "minLength": 1},
+          "source": {"type": "string", "minLength": 1},
+          "status": {
+            "type": "string",
+            "enum": ["proposed", "checked", "rejected"]
+          }
+        }
+      }
+    }
+  }
+}

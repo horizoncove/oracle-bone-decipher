@@ -1,0 +1,69 @@
+name: 释读提案
+description: 对已领号字形提出释读。AI 相似度不算证据。
+title: "[提案] "
+labels:
+  - decipherment-proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提案不是定论。“可接受的候选”只表示程序性合格：未经专家评审，仅表示证据齐备、尚无已知反例。
+        “专家认可”暂空置。请先读 docs/evidence-checklist.md 与 docs/review-process.md。
+  - type: input
+    id: glyph_id
+    attributes:
+      label: 目标字编号
+      description: OBD- 加六位数字。没有编号请先申请领号。
+      placeholder: OBD-000001
+    validations:
+      required: true
+  - type: textarea
+    id: evolution_chain
+    attributes:
+      label: 字形演变链
+      description: 写内部证据（异体、对贞、同辞互换）。只比字形不够，甲骨文有一形多用，要先看用法。
+    validations:
+      required: true
+  - type: textarea
+    id: inscriptions
+    attributes:
+      label: 卜辞辞例及出处
+      description: 全部可见辞例，不得挑选。每条都要著录号。图像写“待查原书”或已登记域名的外链，不要上传图片。
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考文献
+      description: 足够回溯到书名与页码。页码缺失的条目不能当证据。
+    validations:
+      required: true
+  - type: textarea
+    id: argument
+    attributes:
+      label: 论证过程
+      description: 释读后逐条通读。声韵训诂只能作辅助。
+    validations:
+      required: true
+  - type: textarea
+    id: relation_to_prior
+    attributes:
+      label: 对已有说法的反驳或支持
+    validations:
+      required: true
+  - type: input
+    id: source_citation
+    attributes:
+      label: 存疑或未识出处
+      description: 必须是某部字编或论著明确列为存疑或未识。没有这条不能提案。
+    validations:
+      required: true
+  - type: checkboxes
+    id: ai_not_evidence
+    attributes:
+      label: 证据边界
+      options:
+        - label: 我确认不把 AI 相似度或 machine-suggestion 写入证据。
+          required: true
+        - label: 我确认没有只凭字形相似、单条灵感式释读、改字迎合、不可证伪或玄学论证。
+          required: true

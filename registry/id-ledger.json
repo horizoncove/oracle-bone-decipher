@@ -1,0 +1,31 @@
+{
+  "allocations": [
+    {
+      "glyph_id": "OBD-000001",
+      "issued_to": "example-recorder",
+      "issued_at": "2026-10-02T00:00:00Z",
+      "state": "used",
+      "source_note": "示例数据，非真实释读",
+      "description": "示例字形描述，非真实拓片",
+      "duplicate_checked_by": "example-reviewer-1"
+    },
+    {
+      "glyph_id": "OBD-000002",
+      "issued_to": "example-recorder",
+      "issued_at": "2026-10-02T00:00:00Z",
+      "state": "used",
+      "source_note": "示例数据，非真实释读",
+      "description": "示例字形描述，非真实拓片",
+      "duplicate_checked_by": "example-reviewer-1"
+    },
+    {
+      "glyph_id": "OBD-000003",
+      "issued_to": "example-recorder",
+      "issued_at": "2026-10-02T00:00:00Z",
+      "state": "used",
+      "source_note": "示例数据，非真实释读",
+      "description": "示例字形描述，非真实拓片",
+      "duplicate_checked_by": "example-reviewer-1"
+    }
+  ]
+}

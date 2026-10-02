@@ -1,0 +1,27 @@
+name: 字形登记 / 纠错
+description: 登记指针或更正著录、片号、释文。不要上传图像。
+title: "[登记] "
+labels:
+  - glyph-registration
+body:
+  - type: input
+    id: glyph_id
+    attributes:
+      label: 字头编号
+      description: 已有编号填 OBD-######。新字形请改用“申请字头编号”。
+      placeholder: OBD-000001
+    validations:
+      required: true
+  - type: input
+    id: catalog_ref
+    attributes:
+      label: 著录书简称与号数
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 要登记或要改正的内容
+      description: 只写指针、片号、自录释文和问题。图像写“待查原书”。不要粘贴未授权正文。
+    validations:
+      required: true

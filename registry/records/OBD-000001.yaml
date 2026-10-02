@@ -1,0 +1,21 @@
+glyph_id: OBD-000001
+example: true
+example_notice: "示例数据，非真实释读"
+status_tier: widely_undeciphered
+review_status: "待议"
+disclaimer: ""
+proposer: example-recorder
+claimed:
+  attestation_count: 9
+  damage_level: complete
+  all_attestations_read: true
+verification:
+  locked: false
+community_reviewers: []
+counterevidence:
+  open: false
+  started_on: null
+  ends_on: null
+  items: []
+evidence: []
+priority_votes: []

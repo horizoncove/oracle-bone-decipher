@@ -1,0 +1,25 @@
+name: 数据源建议
+description: 建议一个外部数据源。许可不明则标待确认，不使用。
+title: "[数据源] "
+labels:
+  - data-source
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 链接
+    validations:
+      required: true
+  - type: textarea
+    id: license_note
+    attributes:
+      label: 许可与是否可商用
+      description: 写你实际看到的许可文本或“待确认”。不要把数据文件提交进本仓库。
+    validations:
+      required: true

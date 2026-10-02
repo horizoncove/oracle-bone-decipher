@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install validators
+        run: pip install -r requirements-dev.txt
+      - name: Validate registry, transcriptions, pilot logs, and links in Markdown
+        run: python scripts/validate_all.py
+      - name: Compare dual entries
+        run: python scripts/compare_entries.py
+      - name: Check registered link domains without probing
+        run: python scripts/check_links.py
+      - name: Publication stats exclude drill logs
+        run: python scripts/stats.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v

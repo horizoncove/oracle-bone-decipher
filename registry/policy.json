@@ -1,0 +1,35 @@
+{
+  "id_pattern": "^OBD-\\d{6}$",
+  "status_tiers_all": [
+    "widely_undeciphered",
+    "multiple_no_consensus",
+    "conventional_but_disputed"
+  ],
+  "status_tiers_allowed_first_batch": [
+    "widely_undeciphered",
+    "multiple_no_consensus"
+  ],
+  "review_statuses": ["待议", "有争议", "可接受的候选", "专家认可"],
+  "expert_endorsement_enabled": false,
+  "expert_qualification_mechanism": "后续再定",
+  "acceptable_candidate_disclaimer": "未经专家评审，仅表示证据齐备、尚无已知反例",
+  "attestation_count_ceiling": 2,
+  "damage_levels": ["complete", "minor", "severe"],
+  "severe_damage": "severe",
+  "minor_box_max": 2,
+  "counterevidence_days": 14,
+  "response_days": 7,
+  "pending_id_cap_per_account": 5,
+  "pending_id_abandon_days": 30,
+  "reviewer_qualification_consistent_entries": 3,
+  "unformed_counterexample_cap_per_proposal": 3,
+  "rejected_counterexample_suspension_count": 5,
+  "suspension_days": 30,
+  "minimum_community_reviewers": 2,
+  "machine_status": "machine-suggestion",
+  "score_semantics": "模型相似度，不是概率，更不是正确性",
+  "thresholds_note": "经验设定，待校准",
+  "source_citation_markers": ["未识", "未释", "存疑", "undeciphered", "doubtful"],
+  "reserved_test_id_min": 900001,
+  "reserved_test_id_max": 900099
+}

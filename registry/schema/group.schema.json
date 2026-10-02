@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/registry/schema/group.schema.json",
+  "title": "Group layer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "glyph_id",
+    "example",
+    "period_group",
+    "group_restricted",
+    "distribution_note",
+    "entered_by"
+  ],
+  "properties": {
+    "glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+    "example": {"type": "boolean"},
+    "period_group": {"type": "string", "minLength": 1},
+    "group_restricted": {"type": "boolean"},
+    "distribution_note": {"type": "string"},
+    "entered_by": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,18 @@
+# 登记记录里若出现 http(s) 链接，主机名必须在此表中。
+# 列入只表示“域名已登记”，不等于允许复制图像或正文。
+# 图像文件（本地路径或带图像后缀的链接）仍然禁止。
+doi.org
+arxiv.org
+github.com
+figshare.com
+ndownloader.figshare.com
+modelscope.cn
+www.modelscope.cn
+ieeexplore.ieee.org
+aclanthology.org
+creativecommons.org
+www.nature.com
+jgw.aynu.edu.cn
+dl.acm.org
+www.wzbwg.com
+wzbwg.com
