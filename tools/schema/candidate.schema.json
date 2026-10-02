@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/tools/schema/candidate.schema.json",
+  "title": "Machine suggestion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "target_glyph_id",
+    "suggested_reading",
+    "rank",
+    "score",
+    "score_semantics",
+    "model",
+    "training_data",
+    "input_ref",
+    "generated_at",
+    "run_id",
+    "status",
+    "closed_set",
+    "human_review"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string", "pattern": "^cand-[A-Za-z0-9-]{8,}$"},
+    "target_glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+    "suggested_reading": {"type": ["string", "null"]},
+    "rank": {"type": ["integer", "null"], "minimum": 1},
+    "score": {"type": ["number", "null"]},
+    "score_semantics": {
+      "const": "模型相似度，不是概率，更不是正确性"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "weights_source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "weights_source": {"type": "string", "minLength": 1}
+      }
+    },
+    "training_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "license"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "license": {"type": "string", "minLength": 1}
+      }
+    },
+    "input_ref": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "minLength": 10},
+    "run_id": {"type": "string", "minLength": 8},
+    "status": {"const": "machine-suggestion"},
+    "closed_set": {"const": true},
+    "human_review": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reviewer", "note", "edited_at"],
+          "properties": {
+            "reviewer": {"type": "string", "minLength": 1},
+            "note": {"type": "string"},
+            "edited_at": {"type": "string", "minLength": 10}
+          }
+        }
+      ]
+    }
+  }
+}

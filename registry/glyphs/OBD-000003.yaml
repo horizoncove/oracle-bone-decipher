@@ -1,0 +1,12 @@
+glyph_id: OBD-000003
+example: true
+example_notice: "示例数据，非真实释读"
+image_pointer: "待查原书"
+piece_ref: "EXAMPLE-PIECE-3"
+catalog_ref: "示例字编EX-3"
+source_citation: "示例论著（示例数据，非真实释读）将此形列为未释"
+facsimile_status: "未摹写"
+variant_relation: "未判定"
+related_glyph_ids: []
+ids_description: ""
+entered_by: example-recorder

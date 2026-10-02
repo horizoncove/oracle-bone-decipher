@@ -1,0 +1,25 @@
+name: 申请字头编号
+description: 领取不透明编号。测试段 OBD-900001 至 OBD-900099 不会发出。
+title: "[领号] "
+labels:
+  - id-request
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: 字形来源
+      description: 著录书、片号或“待查原书”。不要上传或裁切图像。
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 字形描述
+      description: 用文字描述。没有 Unicode 的字形先领号，再在释文里写成〔OBD-######〕。IDS 只写在字头描述栏。
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        两名复核者之一确认不是已有编号的重复后才发号。每个账号同时挂起的未录入编号不超过 5 个。
+        超过 30 天未使用则标为废弃。编号不改、不复用。5 与 30 都是经验设定，待校准。

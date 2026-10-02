@@ -1,0 +1,23 @@
+{
+  "candidate_id": "cand-placeholder1",
+  "target_glyph_id": "OBD-000001",
+  "suggested_reading": null,
+  "rank": null,
+  "score": null,
+  "score_semantics": "模型相似度，不是概率，更不是正确性",
+  "model": {
+    "name": "OBSD",
+    "version": "unknown",
+    "weights_source": "https://github.com/guanhaisu/OBSD"
+  },
+  "training_data": {
+    "name": "上游 README 与论文提到的训练数据；本文件未绑定具体快照",
+    "license": "unknown"
+  },
+  "input_ref": "glyph:OBD-000001",
+  "generated_at": "2026-10-02T00:00:00Z",
+  "run_id": "placeholder-run",
+  "status": "machine-suggestion",
+  "closed_set": true,
+  "human_review": null
+}

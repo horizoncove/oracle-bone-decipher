@@ -1,0 +1,23 @@
+# 建议标签。GitHub 不会因为本文件存在而自动创建它们。
+# 维护者可按此清单在仓库设置里建立同名标签。
+- name: decipherment-proposal
+  color: "1D76DB"
+  description: "释读提案"
+- name: glyph-registration
+  color: "0E8A16"
+  description: "字形登记或纠错"
+- name: data-source
+  color: "FBCA04"
+  description: "数据源建议"
+- name: id-request
+  color: "5319E7"
+  description: "申请字头编号"
+- name: ready-for-counterevidence
+  color: "B60205"
+  description: "形式门与两名复核已通过，可以开启反证期"
+- name: counter-evidence-open
+  color: "D93F0B"
+  description: "14 天反证期进行中"
+- name: scope-stale-review
+  color: "C5DEF5"
+  description: "范围过期，需复查（只提醒，不自动降档；路线图，尚未自动加标签）"

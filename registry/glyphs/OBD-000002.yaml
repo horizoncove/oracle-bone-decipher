@@ -1,0 +1,13 @@
+glyph_id: OBD-000002
+example: true
+example_notice: "示例数据，非真实释读"
+image_pointer: "待查原书"
+piece_ref: "EXAMPLE-PIECE-2"
+catalog_ref: "示例字编EX-2"
+source_citation: "示例论著（示例数据，非真实释读）将此形列为存疑"
+facsimile_status: "摹写存疑"
+variant_relation: "疑似同字"
+related_glyph_ids:
+  - OBD-000001
+ids_description: ""
+entered_by: example-recorder

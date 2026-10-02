@@ -1,0 +1,40 @@
+name: counterevidence-window
+
+on:
+  issues:
+    types: [labeled, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  mark:
+    if: >-
+      (github.event.action == 'labeled' && github.event.label.name == 'ready-for-counterevidence') ||
+      (github.event.action == 'edited' && contains(join(github.event.issue.labels.*.name, ','), 'counter-evidence-open'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-dev.txt
+      - id: window
+        run: python scripts/counterevidence_window.py --github-output
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const start = "${{ steps.window.outputs.start }}";
+            const end = "${{ steps.window.outputs.end }}";
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["counter-evidence-open"]
+            });
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `反证期（UTC）：${start} 至 ${end}。共 14 天，这是经验设定，待校准。期间提案内容冻结；若修改正文，本工作流会按编辑时间重新起算。实质反例请用仓库里的固定模板。此标签只标出窗口，不自动改变释读状态。`
+            });

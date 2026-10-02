@@ -1,0 +1,3 @@
+# Français
+
+行为准则译文待认领。以中文版为准。见仓库根目录的 `CODE_OF_CONDUCT.md`。

@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/registry/schema/record.schema.json",
+  "title": "Character dossier",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "glyph_id",
+    "example",
+    "example_notice",
+    "status_tier",
+    "review_status",
+    "disclaimer",
+    "proposer",
+    "claimed",
+    "verification",
+    "community_reviewers",
+    "counterevidence",
+    "evidence",
+    "priority_votes"
+  ],
+  "properties": {
+    "glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+    "example": {"type": "boolean"},
+    "example_notice": {"type": "string"},
+    "status_tier": {
+      "type": "string",
+      "enum": [
+        "widely_undeciphered",
+        "multiple_no_consensus",
+        "conventional_but_disputed"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["待议", "有争议", "可接受的候选", "专家认可"]
+    },
+    "disclaimer": {"type": "string"},
+    "proposer": {"type": "string", "minLength": 1},
+    "claimed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attestation_count", "damage_level", "all_attestations_read"],
+      "properties": {
+        "attestation_count": {"type": "integer", "minimum": 0},
+        "damage_level": {
+          "type": "string",
+          "enum": ["complete", "minor", "severe"]
+        },
+        "all_attestations_read": {"type": "boolean"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locked"],
+      "properties": {
+        "locked": {"type": "boolean"},
+        "reviewer": {"type": "string"},
+        "checked_against_catalog": {"type": "boolean"},
+        "attestation_count": {"type": "integer", "minimum": 0},
+        "damage_level": {
+          "type": "string",
+          "enum": ["complete", "minor", "severe"]
+        },
+        "all_attestations_read": {"type": "boolean"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"locked": {"const": true}},
+            "required": ["locked"]
+          },
+          "then": {
+            "required": [
+              "reviewer",
+              "checked_against_catalog",
+              "attestation_count",
+              "damage_level",
+              "all_attestations_read"
+            ]
+          }
+        }
+      ]
+    },
+    "community_reviewers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "login",
+          "linked_accounts",
+          "confirmed_citations",
+          "confirmed_complete_reading"
+        ],
+        "properties": {
+          "login": {"type": "string", "minLength": 1},
+          "linked_accounts": {"type": "array", "items": {"type": "string"}},
+          "confirmed_citations": {"type": "boolean"},
+          "confirmed_complete_reading": {"type": "boolean"}
+        }
+      }
+    },
+    "counterevidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["open", "started_on", "ends_on", "items"],
+      "properties": {
+        "open": {"type": "boolean"},
+        "started_on": {"type": ["string", "null"]},
+        "ends_on": {"type": ["string", "null"]},
+        "items": {
+          "type": "array",
+          "items": {"type": "object"}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "ref"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["citation", "internal", "comparison"]
+          },
+          "ref": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "priority_votes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["login", "affects_status"],
+        "properties": {
+          "login": {"type": "string"},
+          "affects_status": {"const": false}
+        }
+      }
+    }
+  }
+}

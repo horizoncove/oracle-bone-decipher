@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/horizoncove/oracle-bone-decipher/registry/schema/glyph.schema.json",
+  "title": "Glyph pointer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "glyph_id",
+    "example",
+    "example_notice",
+    "image_pointer",
+    "piece_ref",
+    "catalog_ref",
+    "source_citation",
+    "facsimile_status",
+    "variant_relation",
+    "related_glyph_ids",
+    "ids_description",
+    "entered_by"
+  ],
+  "properties": {
+    "glyph_id": {"type": "string", "pattern": "^OBD-\\d{6}$"},
+    "example": {"type": "boolean"},
+    "example_notice": {"type": "string"},
+    "image_pointer": {"type": "string", "minLength": 1},
+    "piece_ref": {"type": "string", "minLength": 1},
+    "catalog_ref": {"type": "string", "minLength": 1},
+    "source_citation": {"type": "string", "minLength": 1},
+    "facsimile_status": {
+      "type": "string",
+      "enum": ["未摹写", "已摹写", "摹写存疑"]
+    },
+    "variant_relation": {
+      "type": "string",
+      "enum": ["未判定", "疑似同字", "待并合"]
+    },
+    "related_glyph_ids": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^OBD-\\d{6}$"}
+    },
+    "ids_description": {"type": "string"},
+    "entered_by": {"type": "string", "minLength": 1}
+  }
+}

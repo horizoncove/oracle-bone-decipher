@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 新手第一任务
+    url: https://github.com/horizoncove/oracle-bone-decipher/blob/main/docs/first-tasks.md
+    about: 先读第一任务说明。Discussions 需维护者在仓库设置里开启后才可用。

@@ -1,0 +1,18 @@
+社区贡献的释读与登记内容（`registry/` 中的著录性陈述、`docs/` 中的研究性表述、`pilot/` 中的研究日志）采用
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+代码、脚本、Schema 与自动化配置采用 MIT，见 LICENSE。
+
+CC BY 4.0 与 MIT 按其文本，允许他人在遵守相应条款的前提下作商业性再利用。
+本项目另以公益宣言说明运营方式：项目不收费，不接受商业化运作，维护者不从项目获利。
+该宣言不改写上述许可文本。
+
+外部数据集不因本文件获得再许可。见 docs/datasets.md。
+演练目录 pilot/_drill/ 不作为发布数据。
+
+English: contributed readings and registry statements are CC BY 4.0. Code is MIT.
+Both licenses allow commercial reuse under their own terms. The project's
+public-interest statement governs operation only. Third-party datasets are not
+relicensed here.
