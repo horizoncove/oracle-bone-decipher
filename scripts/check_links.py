@@ -14,15 +14,32 @@ sys.path.insert(0, str(ROOT))
 from scripts.obd.engine import URL_RE, load_domain_allowlist
 
 
+def text_urls(text: str) -> list[str]:
+    """从原文抽出 URL。JSON/YAML 的结束引号和逗号不属于链接。"""
+    found = []
+    for match in URL_RE.findall(text):
+        # 原文扫描会把 JSON 收尾的引号、逗号、右花括号吃进匹配。
+        cleaned = match.rstrip("\"',}")
+        if cleaned:
+            found.append(cleaned)
+    return found
+
+
 def registry_urls(root: Path) -> list[str]:
+    """登记记录中的外链。
+
+    ``registry/schema/`` 里的 ``$schema`` 是 JSON Schema 规范标识
+    （https://json-schema.org/draft/2020-12/schema），``$id`` 是模式自身的标识。
+    它们不是著录或图像指针，不参加域名允许表检查。
+    """
     found = []
     registry = root / "registry"
-    for path in sorted(registry.rglob("*.yaml")):
-        text = path.read_text(encoding="utf-8")
-        found.extend(URL_RE.findall(text))
-    for path in sorted(registry.rglob("*.json")):
-        text = path.read_text(encoding="utf-8")
-        found.extend(URL_RE.findall(text))
+    schema_dir = registry / "schema"
+    for pattern in ("*.yaml", "*.json"):
+        for path in sorted(registry.rglob(pattern)):
+            if schema_dir in path.parents:
+                continue
+            found.extend(text_urls(path.read_text(encoding="utf-8")))
     return found
 
 

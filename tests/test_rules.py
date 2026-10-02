@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from scripts.check_links import registry_urls, text_urls  # noqa: E402
 from scripts.obd.engine import (  # noqa: E402
     allocate_id,
     classify_counterexample,
@@ -259,6 +260,37 @@ class ReviewAndCandidateTests(unittest.TestCase):
         self.assertTrue(pointer_errors({"image_pointer": "plate.png"}, allow, "g"))
         self.assertTrue(pointer_errors({"image_pointer": "https://example.com/a"}, allow, "g"))
         self.assertEqual(pointer_errors({"image_pointer": "待查原书"}, allow, "g"), [])
+
+
+class LinkDomainTests(unittest.TestCase):
+    def test_json_punctuation_is_not_part_of_the_url(self):
+        text = '{ "$schema": "https://json-schema.org/draft/2020-12/schema", }\n'
+        self.assertEqual(
+            text_urls(text),
+            ["https://json-schema.org/draft/2020-12/schema"],
+        )
+
+    def test_schema_files_are_not_content_links(self):
+        urls = registry_urls(ROOT)
+        self.assertFalse(any("json-schema.org" in url for url in urls))
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            records = root / "registry" / "records"
+            schema = root / "registry" / "schema"
+            records.mkdir(parents=True)
+            schema.mkdir()
+            (records / "sample.json").write_text(
+                '{"note": "https://example.com/plate"}\n',
+                encoding="utf-8",
+            )
+            (schema / "glyph.schema.json").write_text(
+                "{\n"
+                '  "$schema": "https://json-schema.org/draft/2020-12/schema",\n'
+                '  "$id": "https://github.com/example/registry/schema/glyph.schema.json"\n'
+                "}\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(registry_urls(root), ["https://example.com/plate"])
 
 
 class OtherTests(unittest.TestCase):
