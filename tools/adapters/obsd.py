@@ -1,7 +1,8 @@
 """OBSD 适配器占位。
 
 不调用上游演示站，不加载权重，不编造释读或分数。
-上游事实见 tools/README.md。查不到的字段写 unknown 或在说明里标待确认。
+公开仓库 https://github.com/guanhaisu/OBSD 已于 2026-10-02 核对，见 tools/README.md。
+本文件不下载权重或数据集。查不到的字段写 unknown 或在说明里标待确认。
 """
 
 from __future__ import annotations

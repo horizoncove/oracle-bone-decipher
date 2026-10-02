@@ -21,6 +21,8 @@
 
 用试点字的研究日志试跑阶段 0 的规则。演练继续放在 `pilot/_drill/`，不进发布和统计。
 
+另一次公开网页摸底（检索日 2026-10-02）见 [可读来源调查](source-survey-2026-10-02-readable.md)。其中有一条免登录可读的书目指针，可供以后挑选试点字。本阶段仍不登记真实字形。
+
 本阶段要做、现在还没做：
 
 - 缀合库检索日期晚于 `corpus_scope` 里的日期时，自动加“范围过期，需复查”标签。只提醒，不自动降档。是否降档，由复核者看过新增辞例后再决定。
@@ -43,4 +45,4 @@
 
 ## English
 
-Stages 0–3. Every numeric threshold above is empirical and not yet calibrated. The reserved drill ids are not a threshold. Stale rejoining-corpus searches will later get a reminder label only; nothing is downgraded automatically. Duplicate-proposal search, automatic vote eligibility, collusion sampling, and translation sync are listed here and are not built.
+Stages 0–3. Every numeric threshold above is empirical and not yet calibrated. The reserved drill ids are not a threshold. Stage 1 links a 2026-10-02 survey of pages that can be read without the full character tables; that survey is not a decipherment and registers no glyph. Stale rejoining-corpus searches will later get a reminder label only; nothing is downgraded automatically. Duplicate-proposal search, automatic vote eligibility, collusion sampling, and translation sync are listed here and are not built.
