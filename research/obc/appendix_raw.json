@@ -1,0 +1,2699 @@
+[
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0460/L_0460_9563.jpg",
+   "data/HUST-OBC/deciphered/0447/H_0447_6020B_0.png",
+   "data/HUST-OBC/deciphered/0509/H_0509_602C3_20.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0469/G_0469_乙836合21883子組.png",
+   "data/HUST-OBC/deciphered/1112/X_1112_3669_2.png",
+   "data/HUST-OBC/deciphered/0447/X_0447_5475_4.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/297/X_？_7275_1.png",
+   "data/HUST-OBC/undeciphered/X/297/X_？_7277_3.png",
+   "data/HUST-OBC/undeciphered/X/297/X_？_7279_4.png"
+  ],
+  "cls": "X/297",
+  "n": 25,
+  "rep": "data/HUST-OBC/undeciphered/X/297/X_？_7275_1.png",
+  "intra_sim": 0.19269472360610962,
+  "A": [
+   [
+    "妟",
+    "0460",
+    0.4297494888305664,
+    17
+   ],
+   [
+    "女",
+    "0447",
+    0.1517694592475891,
+    4
+   ],
+   [
+    "孕",
+    "0509",
+    0.0806431695818901,
+    2
+   ],
+   [
+    "妾",
+    "0469",
+    0.07699037343263626,
+    2
+   ],
+   [
+    "每",
+    "0916",
+    0.034365084022283554,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "妾",
+    "0469",
+    0.38781920075416565,
+    5
+   ],
+   [
+    "癭",
+    "1112",
+    0.34045514464378357,
+    2
+   ],
+   [
+    "女",
+    "0447",
+    0.3302650451660156,
+    2
+   ],
+   [
+    "妟",
+    "0460",
+    0.30763253569602966,
+    3
+   ],
+   [
+    "媚",
+    "0498",
+    0.29417937994003296,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0469/G_0469_乙836合21883子組.png",
+  "cls_img": "data/HUST-OBC/deciphered/0460/G_0460_前8.2.1(甲).png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0441/X_0441_4834_1.png",
+   "data/HUST-OBC/deciphered/0289/G_0289_甲骨文1.png",
+   "data/HUST-OBC/deciphered/1135/H_1135_60F30_17.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1742/X_1742_1707_4.png",
+   "data/HUST-OBC/deciphered/1216/H_1216_60E83_17.png",
+   "data/HUST-OBC/deciphered/1084/H_1084_60C37_0.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1212/X_？_8170_3.png",
+   "data/HUST-OBC/undeciphered/X/1212/X_？_8169_1.png",
+   "data/HUST-OBC/undeciphered/X/1212/X_？_8170_2.png"
+  ],
+  "cls": "X/1212",
+  "n": 20,
+  "rep": "data/HUST-OBC/undeciphered/X/1212/X_？_8170_3.png",
+  "intra_sim": 0.15964862704277039,
+  "A": [
+   [
+    "奔",
+    "0441",
+    0.0943608358502388,
+    2
+   ],
+   [
+    "危",
+    "0289",
+    0.08108780533075333,
+    2
+   ],
+   [
+    "盡",
+    "1135",
+    0.03532938286662102,
+    2
+   ],
+   [
+    "弘",
+    "0648",
+    0.02995249070227146,
+    1
+   ],
+   [
+    "厃",
+    "0293",
+    0.02605559304356575,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "𤰇",
+    "1742",
+    0.30345168709754944,
+    0
+   ],
+   [
+    "箙",
+    "1216",
+    0.281416118144989,
+    0
+   ],
+   [
+    "田",
+    "1084",
+    0.2811049818992615,
+    0
+   ],
+   [
+    "瓚",
+    "1078",
+    0.27860158681869507,
+    0
+   ],
+   [
+    "亯",
+    "0132",
+    0.2690877318382263,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1742/X_1742_1707_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/0441/H_0441_611B1_0.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0093/L_0093_5895.jpg",
+   "data/HUST-OBC/deciphered/0358/G_0358_粹144合27982何組.png",
+   "data/HUST-OBC/deciphered/0758/X_0758_6252_2.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0358/X_0358_1045_1.png",
+   "data/HUST-OBC/deciphered/0579/G_0579_甲骨文0.png",
+   "data/HUST-OBC/deciphered/1438/G_1438_拾5.10(甲).png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/956/X_？_7920_2.png",
+   "data/HUST-OBC/undeciphered/X/956/X_？_7921_1.png",
+   "data/HUST-OBC/undeciphered/X/956/X_？_7919_3.png"
+  ],
+  "cls": "X/956",
+  "n": 18,
+  "rep": "data/HUST-OBC/undeciphered/X/956/X_？_7920_2.png",
+  "intra_sim": 0.3840162456035614,
+  "A": [
+   [
+    "丙",
+    "0093",
+    0.4174036979675293,
+    9
+   ],
+   [
+    "商",
+    "0358",
+    0.27397167682647705,
+    6
+   ],
+   [
+    "斝",
+    "0758",
+    0.02940700389444828,
+    1
+   ],
+   [
+    "貞",
+    "1438",
+    0.02779737114906311,
+    0
+   ],
+   [
+    "晶",
+    "0795",
+    0.02650517411530018,
+    2
+   ]
+  ],
+  "B": [
+   [
+    "商",
+    "0358",
+    0.3802374303340912,
+    2
+   ],
+   [
+    "尚",
+    "0579",
+    0.34734055399894714,
+    3
+   ],
+   [
+    "貞",
+    "1438",
+    0.3359217345714569,
+    2
+   ],
+   [
+    "几",
+    "0224",
+    0.32615479826927185,
+    0
+   ],
+   [
+    "朊",
+    "0818",
+    0.3035251498222351,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0358/X_0358_1045_1.png",
+  "cls_img": "data/HUST-OBC/deciphered/0093/G_0093_前1.36.6合23395賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1344_1345/1344/X_1344_4284_2.png",
+   "data/HUST-OBC/deciphered/0186/G_0186_拾6.5合27953何組.png",
+   "data/HUST-OBC/deciphered/0916/G_0916_甲641合27310無名組.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0643/H_0643_60742_14.png",
+   "data/HUST-OBC/deciphered/0746/X_0746_3025_3.png",
+   "data/HUST-OBC/deciphered/0245/X_0245_2186_1.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/278/X_？_7256_4.png",
+   "data/HUST-OBC/undeciphered/X/278/X_？_7255_1.png",
+   "data/HUST-OBC/undeciphered/X/278/X_？_7258_1.png"
+  ],
+  "cls": "X/278",
+  "n": 17,
+  "rep": "data/HUST-OBC/undeciphered/X/278/X_？_7256_4.png",
+  "intra_sim": 0.22597388923168182,
+  "A": [
+   [
+    "茍/苟",
+    "1344_1345",
+    0.2929791510105133,
+    7
+   ],
+   [
+    "先",
+    "0186",
+    0.2526775896549225,
+    6
+   ],
+   [
+    "每",
+    "0916",
+    0.14240194857120514,
+    4
+   ],
+   [
+    "欠",
+    "0892",
+    0.02490255795419216,
+    0
+   ],
+   [
+    "失",
+    "0435",
+    0.01791580766439438,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "弋",
+    "0643",
+    0.3475167751312256,
+    2
+   ],
+   [
+    "敖",
+    "0746",
+    0.3314773738384247,
+    0
+   ],
+   [
+    "割",
+    "0245",
+    0.31318214535713196,
+    1
+   ],
+   [
+    "朱",
+    "0832",
+    0.299821138381958,
+    1
+   ],
+   [
+    "茍",
+    "1344",
+    0.2976006865501404,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0643/H_0643_60742_14.png",
+  "cls_img": "data/HUST-OBC/deciphered/1344_1345/1344/G_1344_前8.7.1(甲).png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0187/H_0187_6067F_13.png",
+   "data/HUST-OBC/deciphered/0183/H_0183_600BD_12.png",
+   "data/HUST-OBC/deciphered/1665/X_1665_6050_2.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0187/H_0187_6067F_19.png",
+   "data/HUST-OBC/deciphered/1395/H_1395_601FD_15.png",
+   "data/HUST-OBC/deciphered/0418/X_0418_2790_1.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/276/X_？_7249_3.png",
+   "data/HUST-OBC/undeciphered/X/276/X_？_7250_1.png",
+   "data/HUST-OBC/undeciphered/X/276/X_？_7251_2.png"
+  ],
+  "cls": "X/276",
+  "n": 16,
+  "rep": "data/HUST-OBC/undeciphered/X/276/X_？_7249_3.png",
+  "intra_sim": 0.21760307252407074,
+  "A": [
+   [
+    "光",
+    "0187",
+    0.4989034831523895,
+    10
+   ],
+   [
+    "兄",
+    "0183",
+    0.09043734520673752,
+    2
+   ],
+   [
+    "鼄",
+    "1665",
+    0.03533153608441353,
+    0
+   ],
+   [
+    "襄",
+    "1395",
+    0.028560513630509377,
+    1
+   ],
+   [
+    "頁",
+    "1583",
+    0.02708854153752327,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "光",
+    "0187",
+    0.3714393675327301,
+    3
+   ],
+   [
+    "襄",
+    "1395",
+    0.31807130575180054,
+    2
+   ],
+   [
+    "夏",
+    "0418",
+    0.29408445954322815,
+    1
+   ],
+   [
+    "鼄",
+    "1665",
+    0.29241105914115906,
+    0
+   ],
+   [
+    "鬼",
+    "1627",
+    0.2909708023071289,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0187/H_0187_6067F_19.png",
+  "cls_img": "data/HUST-OBC/deciphered/0187/G_0187_乙2007合140賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1538/H_1538_60937_21.png",
+   "data/HUST-OBC/deciphered/0597_0598/0597/H_0597_60676_19.png",
+   "data/HUST-OBC/deciphered/1333/X_1333_207_1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1333/X_1333_207_1.png",
+   "data/HUST-OBC/deciphered/0391/H_0391_61408_5.png",
+   "data/HUST-OBC/deciphered/1633/H_1633_60A33_16.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/690/X_？_7659_1.png",
+   "data/HUST-OBC/undeciphered/X/690/X_？_7658_3.png",
+   "data/HUST-OBC/undeciphered/X/690/X_？_7659_4.png"
+  ],
+  "cls": "X/690",
+  "n": 15,
+  "rep": "data/HUST-OBC/undeciphered/X/690/X_？_7659_1.png",
+  "intra_sim": 0.27993258833885193,
+  "A": [
+   [
+    "陷",
+    "1538",
+    0.09655825048685074,
+    2
+   ],
+   [
+    "岳/嶽",
+    "0597_0598",
+    0.0708061084151268,
+    1
+   ],
+   [
+    "艸",
+    "1333",
+    0.06307860463857651,
+    2
+   ],
+   [
+    "皆",
+    "1123",
+    0.05267859250307083,
+    1
+   ],
+   [
+    "吢",
+    "0341",
+    0.038467831909656525,
+    2
+   ]
+  ],
+  "B": [
+   [
+    "艸",
+    "1333",
+    0.3636612296104431,
+    4
+   ],
+   [
+    "在",
+    "0391",
+    0.3241333067417145,
+    0
+   ],
+   [
+    "鳖",
+    "1633",
+    0.29563108086586,
+    0
+   ],
+   [
+    "岳",
+    "0597",
+    0.29179465770721436,
+    1
+   ],
+   [
+    "遣",
+    "1487",
+    0.2873453199863434,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1333/X_1333_207_1.png",
+  "cls_img": "data/HUST-OBC/deciphered/1538/G_1538_乙2235合10655.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0310/H_0310_60378_11.png",
+   "data/HUST-OBC/deciphered/0627/H_0627_604B2_8.png",
+   "data/HUST-OBC/deciphered/1093/H_1093_60C60_20.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1093/H_1093_60C60_3.png",
+   "data/HUST-OBC/deciphered/0310/X_0310_1372_1.png",
+   "data/HUST-OBC/deciphered/0262/X_0262_5881_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/461/X_？_7441_1.png",
+   "data/HUST-OBC/undeciphered/X/461/X_？_7441_4.png",
+   "data/HUST-OBC/undeciphered/X/461/X_？_7442_3.png"
+  ],
+  "cls": "X/461",
+  "n": 14,
+  "rep": "data/HUST-OBC/undeciphered/X/461/X_？_7441_1.png",
+  "intra_sim": 0.22193440794944763,
+  "A": [
+   [
+    "取",
+    "0310",
+    0.45288458466529846,
+    9
+   ],
+   [
+    "度",
+    "0627",
+    0.044722847640514374,
+    0
+   ],
+   [
+    "畋",
+    "1093",
+    0.024725858122110367,
+    1
+   ],
+   [
+    "祭",
+    "1179",
+    0.023228807374835014,
+    1
+   ],
+   [
+    "雝",
+    "1558",
+    0.022264136001467705,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "畋",
+    "1093",
+    0.3861941993236542,
+    4
+   ],
+   [
+    "取",
+    "0310",
+    0.3616613447666168,
+    1
+   ],
+   [
+    "匚",
+    "0262",
+    0.3363792598247528,
+    0
+   ],
+   [
+    "祭",
+    "1179",
+    0.3319244980812073,
+    0
+   ],
+   [
+    "鄰",
+    "0328",
+    0.3288606107234955,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1093/H_1093_60C60_3.png",
+  "cls_img": "data/HUST-OBC/deciphered/0310/G_0310_乙154合20761.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0810/H_0810_60C4B_11.png",
+   "data/HUST-OBC/deciphered/0092/X_0092_3929_1.png",
+   "data/HUST-OBC/deciphered/0202/H_0202_6063C_19.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0624/H_0624_6129D_0.png",
+   "data/HUST-OBC/deciphered/0262/L_0262_2258.jpg",
+   "data/HUST-OBC/deciphered/1162/Y_1162_60588.jpg"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/48/X_？_8230_3.png",
+   "data/HUST-OBC/undeciphered/X/48/X_？_8229_1.png",
+   "data/HUST-OBC/undeciphered/X/48/X_？_8230_1.png"
+  ],
+  "cls": "X/48",
+  "n": 14,
+  "rep": "data/HUST-OBC/undeciphered/X/48/X_？_8230_3.png",
+  "intra_sim": 0.2202080339193344,
+  "A": [
+   [
+    "曾",
+    "0810",
+    0.14979293942451477,
+    4
+   ],
+   [
+    "丘",
+    "0092",
+    0.12186141312122345,
+    2
+   ],
+   [
+    "兮",
+    "0202",
+    0.10468580573797226,
+    3
+   ],
+   [
+    "匚",
+    "0262",
+    0.050456129014492035,
+    1
+   ],
+   [
+    "㠭/展",
+    "0023_0024",
+    0.026982316747307777,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "幽",
+    "0624",
+    0.36235174536705017,
+    1
+   ],
+   [
+    "匚",
+    "0262",
+    0.3555449843406677,
+    0
+   ],
+   [
+    "示",
+    "1162",
+    0.31936606764793396,
+    2
+   ],
+   [
+    "火",
+    "1007",
+    0.3124626576900482,
+    0
+   ],
+   [
+    "茲",
+    "1347",
+    0.31054678559303284,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0624/H_0624_6129D_0.png",
+  "cls_img": "data/HUST-OBC/deciphered/0810/G_0810_前6.54.1合1012賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1100/H_1100_60126_3.png",
+   "data/HUST-OBC/deciphered/0429/X_0429_14_1.png",
+   "data/HUST-OBC/deciphered/1661/H_1661_6012D_8.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0513/H_0513_602E7_3.png",
+   "data/HUST-OBC/deciphered/1100/Y_1100_618F3.jpg",
+   "data/HUST-OBC/deciphered/0429/X_0429_14_1.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1148/X_？_7192_4.png",
+   "data/HUST-OBC/undeciphered/X/1148/X_？_7192_1.png",
+   "data/HUST-OBC/undeciphered/X/1148/X_？_7193_1.png"
+  ],
+  "cls": "X/1148",
+  "n": 13,
+  "rep": "data/HUST-OBC/undeciphered/X/1148/X_？_7192_4.png",
+  "intra_sim": 0.3338119387626648,
+  "A": [
+   [
+    "異",
+    "1100",
+    0.08107544481754303,
+    1
+   ],
+   [
+    "天",
+    "0429",
+    0.05044855177402496,
+    1
+   ],
+   [
+    "黑",
+    "1661",
+    0.04900334030389786,
+    1
+   ],
+   [
+    "煮",
+    "1024",
+    0.04438954219222069,
+    2
+   ],
+   [
+    "畫",
+    "1099",
+    0.033963751047849655,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "孟",
+    "0513",
+    0.3834347426891327,
+    2
+   ],
+   [
+    "異",
+    "1100",
+    0.33533546328544617,
+    0
+   ],
+   [
+    "天",
+    "0429",
+    0.33308345079421997,
+    2
+   ],
+   [
+    "屯",
+    "0593",
+    0.32195883989334106,
+    1
+   ],
+   [
+    "亲",
+    "0133",
+    0.30201074481010437,
+    2
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0513/H_0513_602E7_3.png",
+  "cls_img": "data/HUST-OBC/deciphered/1100/G_1100_乙1493合17992賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0348/G_0348_後2.37.4合6822賓組.png",
+   "data/HUST-OBC/deciphered/1698/X_1698_1669_4.png",
+   "data/HUST-OBC/deciphered/0535_0536/0535/H_0535_6139A_18.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1698/X_1698_1669_1.png",
+   "data/HUST-OBC/deciphered/1181/Y_1181_60C89.jpg",
+   "data/HUST-OBC/deciphered/0384/X_0384_3095_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1008/X_？_7969_4.png",
+   "data/HUST-OBC/undeciphered/X/1008/X_？_7969_3.png",
+   "data/HUST-OBC/undeciphered/X/1008/X_？_7970_2.png"
+  ],
+  "cls": "X/1008",
+  "n": 13,
+  "rep": "data/HUST-OBC/undeciphered/X/1008/X_？_7969_4.png",
+  "intra_sim": 0.4305126965045929,
+  "A": [
+   [
+    "周",
+    "0348",
+    0.3059278726577759,
+    5
+   ],
+   [
+    "𠧞",
+    "1698",
+    0.17424306273460388,
+    4
+   ],
+   [
+    "宜/宐",
+    "0535_0536",
+    0.16719070076942444,
+    3
+   ],
+   [
+    "囿",
+    "0384",
+    0.027270467951893806,
+    0
+   ],
+   [
+    "占",
+    "0280",
+    0.02485543303191662,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "𠧞",
+    "1698",
+    0.5170263051986694,
+    6
+   ],
+   [
+    "禍",
+    "1181",
+    0.45671623945236206,
+    2
+   ],
+   [
+    "囿",
+    "0384",
+    0.44768431782722473,
+    0
+   ],
+   [
+    "占",
+    "0280",
+    0.4379373788833618,
+    0
+   ],
+   [
+    "宐",
+    "0536",
+    0.42330142855644226,
+    2
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1698/X_1698_1669_1.png",
+  "cls_img": "data/HUST-OBC/deciphered/0348/G_0348_乙2170合8472賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0023_0024/0023/L_0023_9141.jpg",
+   "data/HUST-OBC/deciphered/0975/H_0975_60702_13.png",
+   "data/HUST-OBC/deciphered/0327_0328/0328/Y_0328_60C29.jpg"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1085/H_1085_603BF_10.png",
+   "data/HUST-OBC/deciphered/0023_0024/0023/L_0023_9141.jpg",
+   "data/HUST-OBC/deciphered/1598/H_1598_60543_21.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/391/X_？_7374_4.png",
+   "data/HUST-OBC/undeciphered/X/391/X_？_7375_4.png",
+   "data/HUST-OBC/undeciphered/X/391/X_？_7376_3.png"
+  ],
+  "cls": "X/391",
+  "n": 12,
+  "rep": "data/HUST-OBC/undeciphered/X/391/X_？_7374_4.png",
+  "intra_sim": 0.5275885462760925,
+  "A": [
+   [
+    "㠭/展",
+    "0023_0024",
+    0.5189647078514099,
+    9
+   ],
+   [
+    "淵",
+    "0975",
+    0.07708075642585754,
+    1
+   ],
+   [
+    "吅/鄰",
+    "0327_0328",
+    0.05006268247961998,
+    0
+   ],
+   [
+    "唐",
+    "0355",
+    0.03889770433306694,
+    1
+   ],
+   [
+    "匚",
+    "0262",
+    0.01757115311920643,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "由",
+    "1085",
+    0.47509661316871643,
+    5
+   ],
+   [
+    "㠭",
+    "0023",
+    0.43731799721717834,
+    0
+   ],
+   [
+    "首",
+    "1598",
+    0.4316515028476715,
+    3
+   ],
+   [
+    "協",
+    "0250",
+    0.42729470133781433,
+    0
+   ],
+   [
+    "昌",
+    "0778",
+    0.4267244338989258,
+    2
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1085/H_1085_603BF_10.png",
+  "cls_img": "data/HUST-OBC/deciphered/0023_0024/0023/L_0023_9141.jpg"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0023_0024/0024/L_0024_4033.jpg",
+   "data/HUST-OBC/deciphered/0813/X_0813_2314_3.png",
+   "data/HUST-OBC/deciphered/1162/H_1162_60588_20.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0813/X_0813_2314_3.png",
+   "data/HUST-OBC/deciphered/0023_0024/0024/L_0024_4033.jpg",
+   "data/HUST-OBC/deciphered/1704/X_1704_490_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/395/X_？_7381_3.png",
+   "data/HUST-OBC/undeciphered/X/395/X_？_7380_1.png",
+   "data/HUST-OBC/undeciphered/X/395/X_？_7380_4.png"
+  ],
+  "cls": "X/395",
+  "n": 11,
+  "rep": "data/HUST-OBC/undeciphered/X/395/X_？_7381_3.png",
+  "intra_sim": 0.3554003834724426,
+  "A": [
+   [
+    "㠭/展",
+    "0023_0024",
+    0.23620842397212982,
+    5
+   ],
+   [
+    "朁",
+    "0813",
+    0.04414279758930206,
+    1
+   ],
+   [
+    "示",
+    "1162",
+    0.03657669201493263,
+    0
+   ],
+   [
+    "其/箕",
+    "0205_0206",
+    0.029256852343678474,
+    1
+   ],
+   [
+    "晉",
+    "0790",
+    0.02540007419884205,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "朁",
+    "0813",
+    0.4336758852005005,
+    2
+   ],
+   [
+    "展",
+    "0024",
+    0.4205491244792938,
+    2
+   ],
+   [
+    "𠯑",
+    "1704",
+    0.344940185546875,
+    0
+   ],
+   [
+    "䄆",
+    "0056",
+    0.34294891357421875,
+    0
+   ],
+   [
+    "協",
+    "0250",
+    0.34062570333480835,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0813/X_0813_2314_3.png",
+  "cls_img": "data/HUST-OBC/deciphered/0023_0024/0023/L_0023_9141.jpg"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0191/L_0191_4818.jpg",
+   "data/HUST-OBC/deciphered/1252/H_1252_60062_13.png",
+   "data/HUST-OBC/deciphered/1552_1553/1552/H_1552_60981_1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0191/L_0191_4818.jpg",
+   "data/HUST-OBC/deciphered/1617/X_1617_4205_1.png",
+   "data/HUST-OBC/deciphered/1252/L_1252_10171.jpg"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/113/X_？_7102_2.png",
+   "data/HUST-OBC/undeciphered/X/113/X_？_7102_1.png",
+   "data/HUST-OBC/undeciphered/X/113/X_？_7102_3.png"
+  ],
+  "cls": "X/113",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/113/X_？_7102_2.png",
+  "intra_sim": 0.391684889793396,
+  "A": [
+   [
+    "免",
+    "0191",
+    0.49094709753990173,
+    7
+   ],
+   [
+    "羌",
+    "1252",
+    0.17712680995464325,
+    2
+   ],
+   [
+    "雈/萑",
+    "1552_1553",
+    0.06877726316452026,
+    1
+   ],
+   [
+    "姜",
+    "0476",
+    0.014558667317032814,
+    0
+   ],
+   [
+    "萈",
+    "1353",
+    0.011096417903900146,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "免",
+    "0191",
+    0.45871925354003906,
+    5
+   ],
+   [
+    "髦",
+    "1617",
+    0.3823157846927643,
+    2
+   ],
+   [
+    "羌",
+    "1252",
+    0.3802659511566162,
+    1
+   ],
+   [
+    "茍",
+    "1344",
+    0.34697848558425903,
+    0
+   ],
+   [
+    "羆",
+    "1248",
+    0.3384058475494385,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0191/L_0191_4818.jpg",
+  "cls_img": "data/HUST-OBC/deciphered/0191/G_0191_合33069無名組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1290_1291_1292/1290/H_1290_60D78_12.png",
+   "data/HUST-OBC/deciphered/1093/H_1093_60C60_1.png",
+   "data/HUST-OBC/deciphered/0362_0363/0362/G_0362_乙4155合13056.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1093/H_1093_60C60_1.png",
+   "data/HUST-OBC/deciphered/1290_1291_1292/1290/H_1290_60D7B_1.png",
+   "data/HUST-OBC/deciphered/0821/H_0821_61256_12.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/462/X_？_7445_2.png",
+   "data/HUST-OBC/undeciphered/X/462/X_？_7446_1.png",
+   "data/HUST-OBC/undeciphered/X/462/X_？_7445_3.png"
+  ],
+  "cls": "X/462",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/462/X_？_7445_2.png",
+  "intra_sim": 0.2281387895345688,
+  "A": [
+   [
+    "肇/肈/肁",
+    "1290_1291_1292",
+    0.7821734547615051,
+    8
+   ],
+   [
+    "畋",
+    "1093",
+    0.09809951484203339,
+    1
+   ],
+   [
+    "啟/啓",
+    "0362_0363",
+    0.04315153881907463,
+    1
+   ],
+   [
+    "般",
+    "1329",
+    0.0049390485510230064,
+    0
+   ],
+   [
+    "受",
+    "0311",
+    0.00399496266618371,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "畋",
+    "1093",
+    0.4394054412841797,
+    3
+   ],
+   [
+    "肇",
+    "1290",
+    0.42584872245788574,
+    2
+   ],
+   [
+    "朕",
+    "0821",
+    0.36482828855514526,
+    0
+   ],
+   [
+    "取",
+    "0310",
+    0.34960129857063293,
+    1
+   ],
+   [
+    "雹",
+    "1568",
+    0.34478873014450073,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1093/H_1093_60C60_1.png",
+  "cls_img": "data/HUST-OBC/deciphered/1290_1291_1292/1290/G_1290_合21623子組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1423/G_1423_京津776合20008𠂤組.png",
+   "data/HUST-OBC/deciphered/1601/G_1601_前4.45.5合5715賓組.png",
+   "data/HUST-OBC/deciphered/1431/H_1431_608A1_1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0872/X_0872_3390_4.png",
+   "data/HUST-OBC/deciphered/1367/X_1367_2409_4.png",
+   "data/HUST-OBC/deciphered/0001/X_0001_1027_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/773/X_？_7736_4.png",
+   "data/HUST-OBC/undeciphered/X/773/X_？_7737_1.png",
+   "data/HUST-OBC/undeciphered/X/773/X_？_7736_3.png"
+  ],
+  "cls": "X/773",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/773/X_？_7736_4.png",
+  "intra_sim": 0.16851811110973358,
+  "A": [
+   [
+    "豕",
+    "1423",
+    0.21080990135669708,
+    4
+   ],
+   [
+    "馬",
+    "1601",
+    0.10060936212539673,
+    0
+   ],
+   [
+    "豭",
+    "1431",
+    0.1003880649805069,
+    1
+   ],
+   [
+    "尊",
+    "0572",
+    0.04680221900343895,
+    1
+   ],
+   [
+    "炎",
+    "1013",
+    0.037411801517009735,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "棘",
+    "0872",
+    0.3230036199092865,
+    1
+   ],
+   [
+    "虐",
+    "1367",
+    0.29651087522506714,
+    3
+   ],
+   [
+    "㐁",
+    "0001",
+    0.29015785455703735,
+    0
+   ],
+   [
+    "𦏧",
+    "0517",
+    0.27418097853660583,
+    0
+   ],
+   [
+    "鹿",
+    "1648",
+    0.27274784445762634,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0872/X_0872_3390_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/1423/G_1423_乙1234.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1067/L_1067_8092.jpg",
+   "data/HUST-OBC/deciphered/0475/H_0475_602A3_7.png",
+   "data/HUST-OBC/deciphered/1079/L_1079_7011.jpg"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1369/H_1369_60928_10.png",
+   "data/HUST-OBC/deciphered/0475/H_0475_602A3_7.png",
+   "data/HUST-OBC/deciphered/1702/G_1702_甲807合27995無名組.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/800/X_？_7763_4.png",
+   "data/HUST-OBC/undeciphered/X/800/X_？_7762_4.png",
+   "data/HUST-OBC/undeciphered/X/800/X_？_7764_1.png"
+  ],
+  "cls": "X/800",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/800/X_？_7763_4.png",
+  "intra_sim": 0.29449746012687683,
+  "A": [
+   [
+    "獻",
+    "1067",
+    0.24738040566444397,
+    4
+   ],
+   [
+    "姛",
+    "0475",
+    0.14894556999206543,
+    2
+   ],
+   [
+    "甗",
+    "1079",
+    0.08852414041757584,
+    0
+   ],
+   [
+    "祝",
+    "1174",
+    0.07648085802793503,
+    2
+   ],
+   [
+    "風/鳳/鳯",
+    "1589_1590_1591",
+    0.05005805566906929,
+    2
+   ]
+  ],
+  "B": [
+   [
+    "虘",
+    "1369",
+    0.3910747766494751,
+    2
+   ],
+   [
+    "姛",
+    "0475",
+    0.3536774218082428,
+    1
+   ],
+   [
+    "𠭯",
+    "1702",
+    0.34254002571105957,
+    1
+   ],
+   [
+    "娠",
+    "0487",
+    0.3367631435394287,
+    1
+   ],
+   [
+    "獻",
+    "1067",
+    0.3201524317264557,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1369/H_1369_60928_10.png",
+  "cls_img": "data/HUST-OBC/deciphered/1067/G_1067_前8.11.2合31812無名組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1545_1546/1545/G_1545_後2.42.16合21657子組.png",
+   "data/HUST-OBC/deciphered/1113/X_1113_6533_3.png",
+   "data/HUST-OBC/deciphered/0616/H_0616_605BA_3.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0597_0598/0597/H_0597_60679_8.png",
+   "data/HUST-OBC/deciphered/1113/X_1113_6533_3.png",
+   "data/HUST-OBC/deciphered/1651/H_1651_60942_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/833/X_？_7795_2.png",
+   "data/HUST-OBC/undeciphered/X/833/X_？_7795_1.png",
+   "data/HUST-OBC/undeciphered/X/833/X_？_7795_3.png"
+  ],
+  "cls": "X/833",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/833/X_？_7795_2.png",
+  "intra_sim": 0.19538293778896332,
+  "A": [
+   [
+    "隻/獲",
+    "1545_1546",
+    0.17581185698509216,
+    3
+   ],
+   [
+    "癸",
+    "1113",
+    0.17483718693256378,
+    3
+   ],
+   [
+    "帝",
+    "0616",
+    0.10540370643138885,
+    1
+   ],
+   [
+    "岳/嶽",
+    "0597_0598",
+    0.07165104895830154,
+    1
+   ],
+   [
+    "琮",
+    "1073",
+    0.06027580052614212,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "岳",
+    "0597",
+    0.30280905961990356,
+    0
+   ],
+   [
+    "癸",
+    "1113",
+    0.2842874825000763,
+    2
+   ],
+   [
+    "麐",
+    "1651",
+    0.2691982388496399,
+    0
+   ],
+   [
+    "琮",
+    "1073",
+    0.25760766863822937,
+    1
+   ],
+   [
+    "𤓪",
+    "1741",
+    0.253787636756897,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0597_0598/0597/H_0597_60679_8.png",
+  "cls_img": "data/HUST-OBC/deciphered/1545_1546/1545/G_1545_乙140合20727.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1681/G_1681_甲骨文1.png",
+   "data/HUST-OBC/deciphered/0218/G_0218_粹97合22617出組.png",
+   "data/HUST-OBC/deciphered/0184/H_0184_6089D_11.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0210_0211/0210/H_0210_61232_4.png",
+   "data/HUST-OBC/deciphered/1111/H_1111_60A5A_17.png",
+   "data/HUST-OBC/deciphered/1373/Y_1373_60A11.jpg"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/857/X_？_7823_4.png",
+   "data/HUST-OBC/undeciphered/X/857/X_？_7824_1.png",
+   "data/HUST-OBC/undeciphered/X/857/X_？_7823_1.png"
+  ],
+  "cls": "X/857",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/857/X_？_7823_4.png",
+  "intra_sim": 0.2934226095676422,
+  "A": [
+   [
+    "龜",
+    "1681",
+    0.2311449944972992,
+    3
+   ],
+   [
+    "冓",
+    "0218",
+    0.10459274053573608,
+    3
+   ],
+   [
+    "兆",
+    "0184",
+    0.06147320941090584,
+    1
+   ],
+   [
+    "薦",
+    "1363",
+    0.02916850708425045,
+    1
+   ],
+   [
+    "魚",
+    "1629",
+    0.02856358513236046,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "冉",
+    "0210",
+    0.3537215292453766,
+    1
+   ],
+   [
+    "瘥",
+    "1111",
+    0.3396212160587311,
+    1
+   ],
+   [
+    "虹",
+    "1373",
+    0.3266833424568176,
+    0
+   ],
+   [
+    "龜",
+    "1681",
+    0.3107735812664032,
+    0
+   ],
+   [
+    "由",
+    "1085",
+    0.29190176725387573,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0210_0211/0210/H_0210_61232_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/1681/G_1681_乙5269合926賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0232/X_0232_2191_3.png",
+   "data/HUST-OBC/deciphered/0235/L_0235_1622.jpg",
+   "data/HUST-OBC/deciphered/1048/H_1048_6085D_14.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0243/H_0243_608AE_18.png",
+   "data/HUST-OBC/deciphered/0242/H_0242_6107B_1.png",
+   "data/HUST-OBC/deciphered/0235/L_0235_1809.jpg"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1054/X_？_8014_1.png",
+   "data/HUST-OBC/undeciphered/X/1054/X_？_8014_4.png",
+   "data/HUST-OBC/undeciphered/X/1054/X_？_8016_2.png"
+  ],
+  "cls": "X/1054",
+  "n": 10,
+  "rep": "data/HUST-OBC/undeciphered/X/1054/X_？_8014_1.png",
+  "intra_sim": 0.21275827288627625,
+  "A": [
+   [
+    "刜",
+    "0232",
+    0.2927878201007843,
+    4
+   ],
+   [
+    "利",
+    "0235",
+    0.06087464094161987,
+    1
+   ],
+   [
+    "牝",
+    "1048",
+    0.03495517373085022,
+    1
+   ],
+   [
+    "𦄑",
+    "1754",
+    0.02441270835697651,
+    1
+   ],
+   [
+    "異",
+    "1100",
+    0.02127021551132202,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "剢",
+    "0243",
+    0.3257485330104828,
+    2
+   ],
+   [
+    "剛",
+    "0242",
+    0.3230610191822052,
+    0
+   ],
+   [
+    "利",
+    "0235",
+    0.29056769609451294,
+    0
+   ],
+   [
+    "殊",
+    "0910",
+    0.28955239057540894,
+    0
+   ],
+   [
+    "洀",
+    "0953",
+    0.2855681777000427,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0243/H_0243_608AE_18.png",
+  "cls_img": "data/HUST-OBC/deciphered/0232/G_0232_乙2262合4814賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0678_0679/0678/G_0678_粹79合34103歷組副本0.png",
+   "data/HUST-OBC/deciphered/0893/H_0893_61194_10.png",
+   "data/HUST-OBC/deciphered/1699/X_1699_4238_4.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0893/H_0893_61194_2.png",
+   "data/HUST-OBC/deciphered/0474/X_0474_5572_3.png",
+   "data/HUST-OBC/deciphered/1276/H_1276_60376_10.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/264/X_？_7236_4.png",
+   "data/HUST-OBC/undeciphered/X/264/X_？_7236_2.png",
+   "data/HUST-OBC/undeciphered/X/264/X_？_7237_2.png"
+  ],
+  "cls": "X/264",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/264/X_？_7236_4.png",
+  "intra_sim": 0.22140643000602722,
+  "A": [
+   [
+    "御/禦",
+    "0678_0679",
+    0.19027215242385864,
+    1
+   ],
+   [
+    "次",
+    "0893",
+    0.18496662378311157,
+    2
+   ],
+   [
+    "𠨘",
+    "1699",
+    0.1161058247089386,
+    3
+   ],
+   [
+    "辟",
+    "1460",
+    0.10249748826026917,
+    2
+   ],
+   [
+    "卩",
+    "0284",
+    0.0810076966881752,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "次",
+    "0893",
+    0.3949342370033264,
+    3
+   ],
+   [
+    "委",
+    "0474",
+    0.3404214382171631,
+    1
+   ],
+   [
+    "耳",
+    "1276",
+    0.33789002895355225,
+    0
+   ],
+   [
+    "聮",
+    "1281",
+    0.3343092203140259,
+    0
+   ],
+   [
+    "医",
+    "0265",
+    0.3325607180595398,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0893/H_0893_61194_2.png",
+  "cls_img": "data/HUST-OBC/deciphered/0678_0679/0678/G_0678_乙3380反合17301反.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0455_0456/0455/H_0455_6021A_5.png",
+   "data/HUST-OBC/deciphered/0498/X_0498_5549_3.png",
+   "data/HUST-OBC/deciphered/0488/X_0488_5540_1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0309/X_0309_1370_1.png",
+   "data/HUST-OBC/deciphered/1483/H_1483_60EB8_20.png",
+   "data/HUST-OBC/deciphered/0455_0456/0455/H_0455_6021A_5.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/299/X_？_7284_1.png",
+   "data/HUST-OBC/undeciphered/X/299/X_？_7284_4.png",
+   "data/HUST-OBC/undeciphered/X/299/X_？_7284_2.png"
+  ],
+  "cls": "X/299",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/299/X_？_7284_1.png",
+  "intra_sim": 0.22338254749774933,
+  "A": [
+   [
+    "妍/姸",
+    "0455_0456",
+    0.4457516074180603,
+    5
+   ],
+   [
+    "媚",
+    "0498",
+    0.12243670970201492,
+    1
+   ],
+   [
+    "娥",
+    "0488",
+    0.06227242946624756,
+    1
+   ],
+   [
+    "妾",
+    "0469",
+    0.03412609547376633,
+    0
+   ],
+   [
+    "妻",
+    "0468",
+    0.0194582249969244,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "叔",
+    "0309",
+    0.29836857318878174,
+    1
+   ],
+   [
+    "逸",
+    "1483",
+    0.295318067073822,
+    0
+   ],
+   [
+    "妍",
+    "0455",
+    0.29172807931900024,
+    1
+   ],
+   [
+    "娥",
+    "0488",
+    0.2869597375392914,
+    0
+   ],
+   [
+    "𠭖",
+    "0751",
+    0.2829274833202362,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0309/X_0309_1370_1.png",
+  "cls_img": "data/HUST-OBC/deciphered/0455_0456/0455/H_0455_6021A_0.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1031/H_1031_609C9_14.png",
+   "data/HUST-OBC/deciphered/1629/G_1629_甲骨文0.png",
+   "data/HUST-OBC/deciphered/1547/G_1547_乙7050反.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1031/H_1031_609C9_17.png",
+   "data/HUST-OBC/deciphered/1173/X_1173_50_3.png",
+   "data/HUST-OBC/deciphered/0193_0194/0194/X_0194_4465_2.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/839/X_？_7802_1.png",
+   "data/HUST-OBC/undeciphered/X/839/X_？_7803_1.png",
+   "data/HUST-OBC/undeciphered/X/839/X_？_7801_2.png"
+  ],
+  "cls": "X/839",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/839/X_？_7802_1.png",
+  "intra_sim": 0.34220266342163086,
+  "A": [
+   [
+    "燕",
+    "1031",
+    0.8254033923149109,
+    8
+   ],
+   [
+    "魚",
+    "1629",
+    0.09339818358421326,
+    1
+   ],
+   [
+    "雀",
+    "1547",
+    0.006343010812997818,
+    0
+   ],
+   [
+    "疑/𠤗",
+    "1106_1107",
+    0.004757842049002647,
+    0
+   ],
+   [
+    "耑",
+    "1274",
+    0.0031968457624316216,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "燕",
+    "1031",
+    0.46494972705841064,
+    2
+   ],
+   [
+    "祗",
+    "1173",
+    0.33346715569496155,
+    0
+   ],
+   [
+    "𤉡",
+    "0194",
+    0.3273828327655792,
+    0
+   ],
+   [
+    "鷄",
+    "1642",
+    0.308849960565567,
+    0
+   ],
+   [
+    "美",
+    "1253",
+    0.3074570596218109,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1031/H_1031_609C9_17.png",
+  "cls_img": "data/HUST-OBC/deciphered/1031/G_1031_京津3160.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1163_1164/1163/H_1163_605B5_2.png",
+   "data/HUST-OBC/deciphered/1180/H_1180_605A0_19.png",
+   "data/HUST-OBC/deciphered/0714/H_0714_60D9C_7.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1163_1164/1163/H_1163_605B5_14.png",
+   "data/HUST-OBC/deciphered/1064/H_1064_6088A_4.png",
+   "data/HUST-OBC/deciphered/0101/X_0101_2533_4.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/849/X_？_7813_3.png",
+   "data/HUST-OBC/undeciphered/X/849/X_？_7813_2.png",
+   "data/HUST-OBC/undeciphered/X/849/X_？_7812_1.png"
+  ],
+  "cls": "X/849",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/849/X_？_7813_3.png",
+  "intra_sim": 0.15693095326423645,
+  "A": [
+   [
+    "祀/禩",
+    "1163_1164",
+    0.33883869647979736,
+    3
+   ],
+   [
+    "祼",
+    "1180",
+    0.14107221364974976,
+    2
+   ],
+   [
+    "戠",
+    "0714",
+    0.10121516138315201,
+    2
+   ],
+   [
+    "祐",
+    "1170",
+    0.04493014141917229,
+    1
+   ],
+   [
+    "祏",
+    "1169",
+    0.035247404128313065,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "祀",
+    "1163",
+    0.3761741816997528,
+    2
+   ],
+   [
+    "猶",
+    "1064",
+    0.325668066740036,
+    0
+   ],
+   [
+    "主",
+    "0101",
+    0.2982693910598755,
+    0
+   ],
+   [
+    "祝",
+    "1174",
+    0.2827605903148651,
+    0
+   ],
+   [
+    "歲",
+    "0902",
+    0.28026363253593445,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1163_1164/1163/H_1163_605B5_14.png",
+  "cls_img": "data/HUST-OBC/deciphered/1163_1164/1163/G_1163_乙6419合6037賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1061/G_1061_佚547合37471黃組.png",
+   "data/HUST-OBC/deciphered/1275/G_1275_前6.17.6合5603賓組.png",
+   "data/HUST-OBC/deciphered/0657/X_0657_4446_1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1058/X_1058_4616_4.png",
+   "data/HUST-OBC/deciphered/1042/X_1042_1719_4.png",
+   "data/HUST-OBC/deciphered/1529/X_1529_6334_3.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1153/X_？_8106_2.png",
+   "data/HUST-OBC/undeciphered/X/1153/X_？_8107_1.png",
+   "data/HUST-OBC/undeciphered/X/1153/X_？_8106_3.png"
+  ],
+  "cls": "X/1153",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/1153/X_？_8106_2.png",
+  "intra_sim": 0.08923564851284027,
+  "A": [
+   [
+    "狐",
+    "1061",
+    0.27364790439605713,
+    3
+   ],
+   [
+    "耤",
+    "1275",
+    0.1019606813788414,
+    1
+   ],
+   [
+    "彖",
+    "0657",
+    0.09492828696966171,
+    3
+   ],
+   [
+    "豖",
+    "1424",
+    0.04163318872451782,
+    1
+   ],
+   [
+    "刖",
+    "0231",
+    0.02856576070189476,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "犬",
+    "1058",
+    0.282737135887146,
+    0
+   ],
+   [
+    "爽",
+    "1042",
+    0.26155003905296326,
+    0
+   ],
+   [
+    "防",
+    "1529",
+    0.24968814849853516,
+    0
+   ],
+   [
+    "裘",
+    "1393",
+    0.24664245545864105,
+    0
+   ],
+   [
+    "巴",
+    "0610",
+    0.24270232021808624,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1058/X_1058_4616_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/1061/G_1061_佚547合37471黃組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0212_0213/0212/H_0212_6112F_10.png",
+   "data/HUST-OBC/deciphered/0647/H_0647_6114C_11.png",
+   "data/HUST-OBC/deciphered/1384/G_1384_粹12合34148歷組.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0212_0213/0213/G_0213_甲骨文0.png",
+   "data/HUST-OBC/deciphered/0212_0213/0212/H_0212_6112F_5.png",
+   "data/HUST-OBC/deciphered/0647/H_0647_6114C_1.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1195/X_？_8149_3.png",
+   "data/HUST-OBC/undeciphered/X/1195/X_？_8150_3.png",
+   "data/HUST-OBC/undeciphered/X/1195/X_？_8150_2.png"
+  ],
+  "cls": "X/1195",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/1195/X_？_8149_3.png",
+  "intra_sim": 0.6765437722206116,
+  "A": [
+   [
+    "冊/册",
+    "0212_0213",
+    0.33572641015052795,
+    5
+   ],
+   [
+    "弗",
+    "0647",
+    0.16636210680007935,
+    1
+   ],
+   [
+    "血",
+    "1384",
+    0.12938226759433746,
+    2
+   ],
+   [
+    "𨪐",
+    "1766",
+    0.11411119997501373,
+    1
+   ],
+   [
+    "用",
+    "1082",
+    0.036724865436553955,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "册",
+    "0213",
+    0.5617703795433044,
+    3
+   ],
+   [
+    "冊",
+    "0212",
+    0.542104959487915,
+    1
+   ],
+   [
+    "弗",
+    "0647",
+    0.5252420902252197,
+    1
+   ],
+   [
+    "𨪐",
+    "1766",
+    0.5219969153404236,
+    2
+   ],
+   [
+    "毌",
+    "0914",
+    0.5130278468132019,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0212_0213/0213/G_0213_甲骨文0.png",
+  "cls_img": "data/HUST-OBC/deciphered/0212_0213/0212/G_0212_乙145合20338𠂤組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1502/H_1502_60F71_15.png",
+   "data/HUST-OBC/deciphered/1180/H_1180_605A4_14.png",
+   "data/HUST-OBC/deciphered/1506/H_1506_60F7E_8.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1502/H_1502_60F71_4.png",
+   "data/HUST-OBC/deciphered/1180/H_1180_605A4_20.png",
+   "data/HUST-OBC/deciphered/1506/H_1506_60F7E_8.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/39/X_？_8217_4.png",
+   "data/HUST-OBC/undeciphered/X/39/X_？_8218_1.png",
+   "data/HUST-OBC/undeciphered/X/39/X_？_8218_2.png"
+  ],
+  "cls": "X/39",
+  "n": 9,
+  "rep": "data/HUST-OBC/undeciphered/X/39/X_？_8217_4.png",
+  "intra_sim": 0.5264699459075928,
+  "A": [
+   [
+    "酉",
+    "1502",
+    0.4854170083999634,
+    6
+   ],
+   [
+    "祼",
+    "1180",
+    0.33536413311958313,
+    3
+   ],
+   [
+    "酓",
+    "1506",
+    0.019375348463654518,
+    0
+   ],
+   [
+    "福",
+    "1182",
+    0.014156937599182129,
+    0
+   ],
+   [
+    "䊤",
+    "0059",
+    0.005850660614669323,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "酉",
+    "1502",
+    0.47801998257637024,
+    3
+   ],
+   [
+    "祼",
+    "1180",
+    0.4709472060203552,
+    3
+   ],
+   [
+    "酓",
+    "1506",
+    0.3714732229709625,
+    0
+   ],
+   [
+    "瓒",
+    "1077",
+    0.3692479133605957,
+    0
+   ],
+   [
+    "吾",
+    "0345",
+    0.36290547251701355,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1502/H_1502_60F71_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/1502/G_1502_乙6277合7075賓組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1736_1737_1738/1736/H_1736_6100F_10.png",
+   "data/HUST-OBC/deciphered/1290_1291_1292/1290/H_1290_60D7A_0.png",
+   "data/HUST-OBC/deciphered/1307/X_1307_1449_2.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1093/H_1093_60C60_6.png",
+   "data/HUST-OBC/deciphered/0998/H_0998_6071B_20.png",
+   "data/HUST-OBC/deciphered/0672_0673_0674/0673/H_0673_60A7A_16.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/358/X_？_7341_3.png",
+   "data/HUST-OBC/undeciphered/X/358/X_？_7341_4.png",
+   "data/HUST-OBC/undeciphered/X/358/X_？_7341_1.png"
+  ],
+  "cls": "X/358",
+  "n": 8,
+  "rep": "data/HUST-OBC/undeciphered/X/358/X_？_7341_3.png",
+  "intra_sim": 0.2207198143005371,
+  "A": [
+   [
+    "𣪕/𣪘/㲃",
+    "1736_1737_1738",
+    0.4595770835876465,
+    6
+   ],
+   [
+    "肇/肈/肁",
+    "1290_1291_1292",
+    0.07120916992425919,
+    0
+   ],
+   [
+    "臤",
+    "1307",
+    0.0520930141210556,
+    1
+   ],
+   [
+    "既",
+    "0772",
+    0.05129757896065712,
+    1
+   ],
+   [
+    "觳",
+    "1404",
+    0.03034389577805996,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "畋",
+    "1093",
+    0.3660864233970642,
+    0
+   ],
+   [
+    "濤",
+    "0998",
+    0.3446718156337738,
+    0
+   ],
+   [
+    "㝵",
+    "0673",
+    0.3304479718208313,
+    1
+   ],
+   [
+    "剢",
+    "0243",
+    0.3151955008506775,
+    0
+   ],
+   [
+    "臣",
+    "1306",
+    0.30987921357154846,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1093/H_1093_60C60_6.png",
+  "cls_img": "data/HUST-OBC/deciphered/1736_1737_1738/1736/G_1736_乙8810合22294子組.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1145/G_1145_鐵73.1合4503賓組.png",
+   "data/HUST-OBC/deciphered/0595/G_0595_甲骨文0.png",
+   "data/HUST-OBC/deciphered/1456/H_1456_61279_0.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1145/L_1145_12786.jpg",
+   "data/HUST-OBC/deciphered/1139/X_1139_1750_3.png",
+   "data/HUST-OBC/deciphered/0595/G_0595_甲骨文0.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/365/X_？_7350_2.png",
+   "data/HUST-OBC/undeciphered/X/365/X_？_7349_1.png",
+   "data/HUST-OBC/undeciphered/X/365/X_？_7349_4.png"
+  ],
+  "cls": "X/365",
+  "n": 8,
+  "rep": "data/HUST-OBC/undeciphered/X/365/X_？_7350_2.png",
+  "intra_sim": 0.45097604393959045,
+  "A": [
+   [
+    "眉",
+    "1145",
+    0.8192710876464844,
+    7
+   ],
+   [
+    "山",
+    "0595",
+    0.02002384141087532,
+    1
+   ],
+   [
+    "車",
+    "1456",
+    0.012024076655507088,
+    0
+   ],
+   [
+    "射/䠶",
+    "0567_0568",
+    0.008072778582572937,
+    0
+   ],
+   [
+    "虍",
+    "1365",
+    0.006468732375651598,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "眉",
+    "1145",
+    0.4904985725879669,
+    4
+   ],
+   [
+    "目",
+    "1139",
+    0.3618992865085602,
+    1
+   ],
+   [
+    "山",
+    "0595",
+    0.3256344199180603,
+    0
+   ],
+   [
+    "𦟀",
+    "1756",
+    0.32272762060165405,
+    0
+   ],
+   [
+    "禺",
+    "1185",
+    0.31866827607154846,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1145/L_1145_12786.jpg",
+  "cls_img": "data/HUST-OBC/deciphered/1145/G_1145_京津2082合3198.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0312_0313/0312/G_0312_甲788(甲).png",
+   "data/HUST-OBC/deciphered/1274/X_1274_3507_1.png",
+   "data/HUST-OBC/deciphered/1354/H_1354_60A1A_13.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/0312_0313/0313/G_0313_掇2.159合33747歷組.png",
+   "data/HUST-OBC/deciphered/1033/L_1033_3603.jpg",
+   "data/HUST-OBC/deciphered/1120_1121/1120/H_1120_6101A_4.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/473/X_？_7458_1.png",
+   "data/HUST-OBC/undeciphered/X/473/X_？_7457_3.png",
+   "data/HUST-OBC/undeciphered/X/473/X_？_7458_3.png"
+  ],
+  "cls": "X/473",
+  "n": 8,
+  "rep": "data/HUST-OBC/undeciphered/X/473/X_？_7458_1.png",
+  "intra_sim": 0.19355477392673492,
+  "A": [
+   [
+    "叟/叜",
+    "0312_0313",
+    0.22885878384113312,
+    3
+   ],
+   [
+    "耑",
+    "1274",
+    0.17012275755405426,
+    2
+   ],
+   [
+    "萬",
+    "1354",
+    0.10191576182842255,
+    1
+   ],
+   [
+    "爇",
+    "1033",
+    0.08644136041402817,
+    0
+   ],
+   [
+    "燎/尞",
+    "1029_1030",
+    0.06413295120000839,
+    1
+   ]
+  ],
+  "B": [
+   [
+    "叜",
+    "0313",
+    0.3497452139854431,
+    1
+   ],
+   [
+    "爇",
+    "1033",
+    0.33348900079727173,
+    2
+   ],
+   [
+    "皀",
+    "1120",
+    0.3126504123210907,
+    0
+   ],
+   [
+    "萬",
+    "1354",
+    0.3052835166454315,
+    0
+   ],
+   [
+    "汊",
+    "0928",
+    0.2997022271156311,
+    1
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/0312_0313/0313/G_0313_掇2.159合33747歷組.png",
+  "cls_img": "data/HUST-OBC/deciphered/0312_0313/0312/G_0312_前4.28.7(甲).png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/1075/Y_1075_60BAF.jpg",
+   "data/HUST-OBC/deciphered/0642/L_0642_4117.jpg",
+   "data/HUST-OBC/deciphered/0384/H_0384_60C48_9.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1075/Y_1075_60BAF.jpg",
+   "data/HUST-OBC/deciphered/1444/H_1444_616BE_16.png",
+   "data/HUST-OBC/deciphered/0062_0063/0063/H_0063_61081_0.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/1190/X_？_8145_1.png",
+   "data/HUST-OBC/undeciphered/X/1190/X_？_8144_3.png",
+   "data/HUST-OBC/undeciphered/X/1190/X_？_8145_2.png"
+  ],
+  "cls": "X/1190",
+  "n": 8,
+  "rep": "data/HUST-OBC/undeciphered/X/1190/X_？_8145_1.png",
+  "intra_sim": 0.27700725197792053,
+  "A": [
+   [
+    "璞",
+    "1075",
+    0.7443552613258362,
+    6
+   ],
+   [
+    "弄",
+    "0642",
+    0.06541137397289276,
+    1
+   ],
+   [
+    "囿",
+    "0384",
+    0.06062716245651245,
+    1
+   ],
+   [
+    "周",
+    "0348",
+    0.0145575487986207,
+    0
+   ],
+   [
+    "困",
+    "0381",
+    0.012377584353089333,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "璞",
+    "1075",
+    0.5289369225502014,
+    5
+   ],
+   [
+    "買",
+    "1444",
+    0.3337438106536865,
+    0
+   ],
+   [
+    "罩",
+    "0063",
+    0.3097701966762543,
+    0
+   ],
+   [
+    "變",
+    "1417",
+    0.30669575929641724,
+    0
+   ],
+   [
+    "潾",
+    "0992",
+    0.3035643696784973,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1075/Y_1075_60BAF.jpg",
+  "cls_img": "data/HUST-OBC/deciphered/1075/H_1075_60BAF_0.png"
+ },
+ {
+  "ex": [
+   "data/HUST-OBC/deciphered/0108/G_0108_京津2222合11635.png",
+   "data/HUST-OBC/deciphered/1670/L_1670_10229.jpg",
+   "data/HUST-OBC/deciphered/0202/G_0202_前8.10.1.png"
+  ],
+  "exB": [
+   "data/HUST-OBC/deciphered/1217/H_1217_60A4C_4.png",
+   "data/HUST-OBC/deciphered/0928/H_0928_60495_4.png",
+   "data/HUST-OBC/deciphered/0108/X_0108_2358_4.png"
+  ],
+  "samp": [
+   "data/HUST-OBC/undeciphered/X/82/X_？_8266_1.png",
+   "data/HUST-OBC/undeciphered/X/82/X_？_8266_3.png",
+   "data/HUST-OBC/undeciphered/X/82/X_？_8266_4.png"
+  ],
+  "cls": "X/82",
+  "n": 8,
+  "rep": "data/HUST-OBC/undeciphered/X/82/X_？_8266_1.png",
+  "intra_sim": 0.3707273006439209,
+  "A": [
+   [
+    "乎",
+    "0108",
+    0.47293800115585327,
+    6
+   ],
+   [
+    "鼠",
+    "1670",
+    0.0710446685552597,
+    1
+   ],
+   [
+    "兮",
+    "0202",
+    0.05981116369366646,
+    1
+   ],
+   [
+    "米",
+    "1217",
+    0.058043453842401505,
+    0
+   ],
+   [
+    "主",
+    "0101",
+    0.03851698338985443,
+    0
+   ]
+  ],
+  "B": [
+   [
+    "米",
+    "1217",
+    0.44086816906929016,
+    0
+   ],
+   [
+    "汊",
+    "0928",
+    0.4307803809642792,
+    3
+   ],
+   [
+    "乎",
+    "0108",
+    0.4068524241447449,
+    2
+   ],
+   [
+    "鼠",
+    "1670",
+    0.35960760712623596,
+    0
+   ],
+   [
+    "少",
+    "0577",
+    0.35305696725845337,
+    0
+   ]
+  ],
+  "moco_img": "data/HUST-OBC/deciphered/1217/H_1217_60A4C_4.png",
+  "cls_img": "data/HUST-OBC/deciphered/0108/G_0108_乙6945合17257.png"
+ }
+]
