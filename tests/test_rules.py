@@ -114,6 +114,31 @@ class PilotTests(unittest.TestCase):
         errors = pilot_errors(ROOT / "pilot" / "_TEMPLATE.md", text)
         self.assertTrue(any("线索待查" in item for item in errors))
 
+    def test_login_required_source_caps_conclusion(self):
+        text = (ROOT / "pilot" / "_TEMPLATE.md").read_text(encoding="utf-8")
+        text = text.replace("conclusion_level: \"证据不足暂不结论\"", "conclusion_level: \"候选假说\"", 1)
+        text = text.replace("corpus_scope: \"\"", "corpus_scope: \"示例字编；检索日期 2026-10-02；缀合库查询日期 2026-10-02\"", 1)
+        text = text.replace(
+            "evidence: []",
+            "\n".join(
+                [
+                    "evidence:",
+                    "  - catalog_ref: \"示例字编EX-9\"",
+                    "    quotation: \"示例辞，非真实\"",
+                    "    source: \"需登录的示例库\"",
+                    "    page: \"1\"",
+                    "    checker: \"example\"",
+                    "    login_required: \"是\"",
+                ]
+            ),
+            1,
+        )
+        errors = pilot_errors(ROOT / "pilot" / "_TEMPLATE.md", text)
+        self.assertTrue(any("个人线索" in item for item in errors))
+        text = text.replace("conclusion_level: \"候选假说\"", "conclusion_level: \"线索待查\"", 1)
+        errors = pilot_errors(ROOT / "pilot" / "_TEMPLATE.md", text)
+        self.assertFalse(any("个人线索" in item for item in errors))
+
     def test_scope_requires_rejoin_date(self):
         text = (ROOT / "pilot" / "_TEMPLATE.md").read_text(encoding="utf-8")
         text = text.replace('corpus_scope: ""', 'corpus_scope: "示例字编；检索日期 2026-10-02"', 1)

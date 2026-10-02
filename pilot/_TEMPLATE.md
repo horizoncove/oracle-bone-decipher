@@ -11,6 +11,7 @@ public: false
 second_reviewer: ""
 missed_attestation_in_batch: false
 changelog: []
+evidence: []
 ---
 
 # 试点研究日志模板
@@ -27,7 +28,22 @@ changelog: []
 
 ## 证据清单
 
-著录号、辞例原文、出处页码、核对人。缺页码的条目不算证据。不要在这里粘贴图像。
+每条写在文首 `evidence` 列表里，不要只写在正文。字段是：著录号 `catalog_ref`、辞例原文 `quotation`、出处 `source`、页码 `page`、核对人 `checker`、是否需登录 `login_required`。是否需登录只能填“是”或“否”。
+
+缺页码的条目不算证据。不要在这里粘贴图像。
+
+选“是”的出处只能作个人线索。别人无法免登录复核，这和“证据必须可核查”冲突。日志里只要有一条选“是”，`conclusion_level` 最高到“线索待查”。
+
+虚构格式，不要当成真实检索：
+
+```yaml
+- catalog_ref: "示例字编EX-9"
+  quotation: "示例辞，非真实"
+  source: "示例数据库"
+  page: "12"
+  checker: "example-checker"
+  login_required: "否"
+```
 
 ## 已排除的假说
 
@@ -49,4 +65,4 @@ changelog: []
 
 每次更新追加一行。降档保留既有记录。
 
-English: this blank template is not a real reading. `corpus_scope` must later list the catalogues consulted, an ISO search date, and the date the rejoining corpus was queried. Oracle-bone graphs can share a shape and still differ in use; compare usage before shape. There is no status meaning “deciphered.”
+English: this blank template is not a real reading. `corpus_scope` must later list the catalogues consulted, an ISO search date, and the date the rejoining corpus was queried. Each evidence source has “是否需登录”. A “是” / yes is only a personal clue, and the log cannot rise above “线索待查”, because other people cannot check it without logging in. Oracle-bone graphs can share a shape and still differ in use; compare usage before shape. There is no status meaning “deciphered.”

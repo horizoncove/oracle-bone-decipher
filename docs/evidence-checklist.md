@@ -14,6 +14,8 @@
 
 `source_citation` 必填，而且必须能看出某部字编或论著把该形列为存疑或未识。缺失则校验失败。
 
+每条证据的出处栏有“是否需登录”，只能填“是”或“否”。选“是”的条目只能作个人线索：别人无法免登录复核，这和“证据必须可核查”冲突。研究日志里只要含一条这样的证据，`conclusion_level` 最高到“线索待查”。校验脚本会检查。缺页码的条目仍然不算证据。
+
 直接不能成立的论证：
 
 - 只凭字形相似，或只凭 AI 相似度
@@ -27,4 +29,4 @@ AI 输出的 `status` 固定为 `machine-suggestion`。提案的 `evidence` 字�
 
 ## English
 
-The checklist is procedural. A model similarity score is not evidence. One graph can have more than one use, so usage comes before shape.
+The checklist is procedural. A model similarity score is not evidence. One graph can have more than one use, so usage comes before shape. A source that requires login is only a personal clue. A research log that includes one cannot go beyond “clue to be checked.”

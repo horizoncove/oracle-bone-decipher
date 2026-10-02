@@ -61,6 +61,14 @@ PILOT_HEADINGS = (
     "## 当前结论与升级条件",
     "## 变更说明",
 )
+EVIDENCE_ITEM_FIELDS = (
+    "catalog_ref",
+    "quotation",
+    "source",
+    "page",
+    "checker",
+    "login_required",
+)
 PROPOSAL_REQUIRED_IDS = (
     "glyph_id",
     "evolution_chain",
@@ -631,6 +639,7 @@ def pilot_errors(path: Path, text: str | None = None, policy: dict | None = None
         "second_reviewer",
         "missed_attestation_in_batch",
         "changelog",
+        "evidence",
     )
     for key in required:
         if key not in meta:
@@ -678,9 +687,40 @@ def pilot_errors(path: Path, text: str | None = None, policy: dict | None = None
         changelog = []
     if started and updated and started != updated and not changelog:
         errors.append(f"{label}: 更新后必须写一行变更说明，降档也要保留旧记录")
+    errors.extend(evidence_login_errors(meta.get("evidence"), level, label))
     for heading in PILOT_HEADINGS:
         if heading not in body:
             errors.append(f"{label}: 缺少章节 {heading}")
+    return errors
+
+
+def evidence_login_errors(evidence: object, level: object, label: str) -> list[str]:
+    """需登录的出处别人无法复核，只能当个人线索。"""
+    errors = []
+    if not isinstance(evidence, list):
+        return [f"{label}: evidence 必须是列表；每条出处都要填是否需登录"]
+    needs_login = False
+    for index, item in enumerate(evidence):
+        item_label = f"{label}: evidence[{index}]"
+        if not isinstance(item, dict):
+            errors.append(f"{item_label}: 必须是一条证据")
+            continue
+        for key in EVIDENCE_ITEM_FIELDS:
+            if key not in item:
+                errors.append(f"{item_label}: 缺少 {key}")
+        login_required = item.get("login_required")
+        if login_required not in {"是", "否"}:
+            errors.append(f"{item_label}: 是否需登录只能填“是”或“否”")
+        elif login_required == "是":
+            needs_login = True
+    if (
+        needs_login
+        and level in PILOT_LEVEL_RANK
+        and PILOT_LEVEL_RANK[level] > PILOT_LEVEL_RANK[PILOT_SCOPE_CEILING]
+    ):
+        errors.append(
+            f"{label}: 含需登录出处的证据只能作个人线索，conclusion_level 最高到线索待查"
+        )
     return errors
 
 
@@ -898,6 +938,8 @@ def validate_repository(root: Path | None = None, now: datetime | None = None) -
             errors.append("试点模板须提醒：甲骨文存在一形多用，只比字形不够")
         if "缀合库查询日期" not in template_text:
             errors.append("试点模板须说明 corpus_scope 记录缀合库查询日期")
+        if "是否需登录" not in template_text:
+            errors.append("试点模板的出处栏须包含是否需登录")
     for path in sorted((root / "pilot").rglob("*.md")):
         if path.name == "README.md":
             continue
