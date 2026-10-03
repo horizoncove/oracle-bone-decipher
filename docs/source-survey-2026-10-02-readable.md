@@ -54,6 +54,10 @@ HUST-OBC、Oracle-50K、OBC306 仍不入库。2026-10-02 对 [Pengjie-W/HUST-OBC
 
 只使用合法公开来源。不上传图像，不粘贴未授权的书页、释文或字表。缺页码的条目不算证据。本调查文件没有结论等级。
 
+## 后续
+
+2026-10-04 的续查另写在 [来源调查（2026-10-04）](source-survey-2026-10-04.md)。那一页不重开本节对《综理表》和《待问编》全文的否定结论。
+
 ## English
 
 Search date: 2026-10-02. This file records pages that were opened or that failed to connect. It is not a decipherment and it registers no glyph. Draft PR #2 already recorded that no legal public full text of 综理表 or 待问编 was found; that conclusion is not reopened.
@@ -61,3 +65,5 @@ Search date: 2026-10-02. This file records pages that were opened or that failed
 One opened page is readable without login. Wang Ziyang’s 2011 essay on the Fudan center site says the graph under discussion is *Xin jiaguwen bian* appendix 0771, page 958, treated there as unidentified, and it names *Heji* 30945, *Heji* 30946, and *Anming* 1688. The same bibliographic pointer is in `pilot/_drill/OBD-900002.md`. That file uses a reserved test id, so it is not a real OBD id and it is excluded from publication. The graph on that page is an image, which this repository does not copy. `image_pointer` names the book and page only. The essay proposes a reading; this survey does not transcribe the inscriptions or adopt the reading. `www.fdgwz.org.cn` stays off the allowlist because no registry record cites it.
 
 The other opened pages are a collation that reassigns appendix graphs to known characters, museum award titles, a news item that announces 500 graphs without listing them, two paper abstracts that give counts rather than a named graph, and an empty web-app shell. Yinqi Wenyuan (`jgw.aynu.edu.cn`) timed out, including a repeat request of the homepage and `/home/` while these notes were combined, so browsing without login stays unverified. Other new hostnames stay off the allowlist until a glyph record needs them. HUST-OBC, Oracle-50K, and OBC306 stay out of the tree.
+
+A later pass, dated 2026-10-04, is in `source-survey-2026-10-04.md`. It does not reopen the negative finding on the two full texts.
