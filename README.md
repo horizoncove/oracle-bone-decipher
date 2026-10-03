@@ -91,7 +91,8 @@ python -m unittest discover -s tests -v
 登记格式和流程是为本仓库设计的。上游研究只作为外链，不表示那些作者认可本仓库：
 
 - HUST-OBC：Wang 等，*Scientific Data*，2024，<https://doi.org/10.1038/s41597-024-03807-x>
-- OBSD：Guan 等，arXiv:2406.00684，<https://github.com/guanhaisu/OBSD>
+- OBSD：Guan 等，arXiv:2406.00684，<https://github.com/guanhaisu/OBSD>。2026-10-02 复核为公开仓库，根目录无 LICENSE 文件。说明见 [tools/README.md](tools/README.md)。权重与数据集不入库。
+- 阶段 1 调查：[综理表与《待问编》](docs/source-survey-2026-10-02.md) 的合法免费全文这次没有找到；[可读页面](docs/source-survey-2026-10-02-readable.md) 只记下一条书目指针。没有登记真实字形。
 
 适配器没有接上推理，见 [tools/README.md](tools/README.md)。
 
