@@ -8,6 +8,8 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -16,3 +18,16 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - name: Probe URLs that already appear in registry records
         run: python scripts/check_links.py --probe
+      - name: Keep the append-only probe record
+        if: always()
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- docs/link-probe-log.jsonl
+          if git diff --cached --quiet; then
+            echo "探活记录没有新行"
+            exit 0
+          fi
+          git commit -m "记录每周链接探活（失败不处罚）"
+          git push

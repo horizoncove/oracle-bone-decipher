@@ -21,12 +21,19 @@
 
 用试点字的研究日志试跑阶段 0 的规则。演练继续放在 `pilot/_drill/`，不进发布和统计。
 
-公开来源摸底（检索日 2026-10-02）见 [来源调查](source-survey-2026-10-02.md)。《综理表》与《待问编》的合法免费全文这次没有在公开网页找到。另一次摸底见 [可读来源调查](source-survey-2026-10-02-readable.md)。书目指针在 `pilot/_drill/OBD-900002.md`：保留测试号，不进发布，也不发给真实字形。
+公开网页摸底记到 2026-10-04b。这些文件是调查记录，不是释读：
 
-本阶段要做、现在还没做：
+- [来源调查（2026-10-02）](source-survey-2026-10-02.md)
+- [可读来源调查（2026-10-02）](source-survey-2026-10-02-readable.md)
+- [来源调查（2026-10-04）](source-survey-2026-10-04.md)
+- [来源调查（2026-10-04b）](source-survey-2026-10-04b.md)
 
-- 缀合库检索日期晚于 `corpus_scope` 里的日期时，自动加“范围过期，需复查”标签。只提醒，不自动降档。是否降档，由复核者看过新增辞例后再决定。
-- 把每周链接探活的结果整理成可追踪的记录。探活脚本已经有了，失败不处罚。
+《综理表》与《待问编》的合法公开全文，仍以 2026-10-02 的调查为准：没有找到。这里不重开。书目指针在 `pilot/_drill/`，用保留测试号，不进发布，也不发给真实字形。
+
+本阶段两项工程：
+
+- 缀合库检索日期晚于 `corpus_scope` 里记下的缀合库查询日期时，自动加上提醒标签“范围过期，需复查”（GitHub 标签名 `scope-stale-review`）。只提醒，不自动降档，不改 `conclusion_level` 或 `status_tier`。是否降档，由复核者看过新增辞例后再决定。`apply_scope_stale_reminder` 只返回带提醒的副本，不把标签写回日志。没有可比日期时不加标签。需要对照某次检索时，运行 `python scripts/validate_all.py --rejoin-search-date YYYY-MM-DD`，该参数不改变校验退出码。
+- 每周链接探活仍由 `scripts/check_links.py --probe` 执行，并追加一行到 [链接探活记录](link-probe-log.md)（`docs/link-probe-log.jsonl`）。失败只写进这条记录，不处罚，也不改登记状态。探活只访问登记记录里已经出现、且主机名已在允许表中的链接。
 
 ## 阶段 2
 
@@ -45,4 +52,4 @@
 
 ## English
 
-Stages 0–3. Every numeric threshold above is empirical and not yet calibrated. The reserved drill ids are not a threshold. Stage 1 links two 2026-10-02 public-web surveys. They are investigation records, not decipherments. A bibliographic pointer sits in `pilot/_drill/` under a reserved test id and is excluded from publication. Stale rejoining-corpus searches will later get a reminder label only; nothing is downgraded automatically. Duplicate-proposal search, automatic vote eligibility, collusion sampling, and translation sync are listed here and are not built.
+Stages 0–3. Every numeric threshold above is empirical and not yet calibrated. The reserved drill ids are not a threshold. Stage 1 links the public-web surveys through 2026-10-04b. They are investigation records, not decipherments. Bibliographic pointers sit in `pilot/_drill/` under reserved test ids and are excluded from publication. A rejoining-corpus search dated later than the rejoining-corpus date stored in `corpus_scope` adds the reminder label `scope-stale-review` (“范围过期，需复查”) on a returned copy only; `conclusion_level` and `status_tier` are not downgraded, and the log file is not rewritten. Weekly link probes append a line to `docs/link-probe-log.jsonl`. A failed probe is a record, not a penalty. Duplicate-proposal search, automatic vote eligibility, collusion sampling, and translation sync are listed here and are not built.

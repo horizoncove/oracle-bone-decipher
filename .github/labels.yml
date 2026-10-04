@@ -20,4 +20,4 @@
   description: "14 天反证期进行中"
 - name: scope-stale-review
   color: "C5DEF5"
-  description: "范围过期，需复查（只提醒，不自动降档；路线图，尚未自动加标签）"
+  description: "范围过期，需复查（只提醒，不自动降档）"
