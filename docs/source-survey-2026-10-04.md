@@ -122,6 +122,10 @@
 
 新出现的主机名 `www.fdgwz.org.cn`、`xiaoxue.iis.sinica.edu.tw`、`epaper.gmw.cn`、`idv.sinica.edu.tw`、`wwj.henan.gov.cn` 本次不加入允许表。`jgw.aynu.edu.cn` 与 `www.wzbwg.com` 本来就在允许表里。列入只表示域名已登记，不等于可以复制图像或正文。
 
+## 后续
+
+2026-10-04 的又一次续查另写在 [来源调查（2026-10-04b）](source-survey-2026-10-04b.md)。那一页不重开本节已记下的三条指针，也不重开 2026-10-02 对《综理表》和《待问编》全文的否定结论。
+
 ## English
 
 Search date: 2026-10-04 (Asia/Shanghai). This file records pages that were opened or that failed to connect. It is not a decipherment and it registers no glyph. The 2026-10-02 finding that no legal public full text of 综理表 or 待问编 was found is not reopened. Notes under `research/` are not evidence.
@@ -131,3 +135,5 @@ Three bibliographic pointers use reserved drill ids. Huang Tianshu’s 2008 essa
 Other opened pages do not support choosing a pilot. Jin He’s essay gives *Jiaguwen bian* page 821 and *Jiagu wenzi bian* page 1322 for *Heji* 22055, then says the revised *Xin jiaguwen bian* already files the graph under 乇. Liu Hongtao’s essay gives *Jiaguwen bian* appendix page 736 and no collection number. Liu Zhao’s essay gives appendix 上101 and two *Jiagu wenzi bian* serials without pages, and says *Xin jiaguwen bian* already files two of the forms under a head. A Xiaoxuetang query for page 731 returned *Heji* 35269, which is not the *Heji* 6528 named by Huang, so the two are not merged. A query for page 736 returned many collection numbers and no 待考 label; it is not matched to Liu Hongtao’s page. The Xiaoxuetang 凡例 still says appendix graphs are excluded, while the statistics page and the homepage give a larger head count. This survey does not resolve that disagreement.
 
 Yinqi Wenyuan (`jgw.aynu.edu.cn`) timed out again, so browsing without login stays unverified. The Fudan rejoining-database homepage is readable and names no unidentified graph; no rejoining query was submitted. A Guangming Daily book essay discusses an appendix graph as later read 明 and mentions 综理表 only as a funded project’s name, without the table’s text. A Henan provincial page timed out. A museum search URL returned the museum homepage and no list of 500 graphs. HUST-OBC, Oracle-50K, and OBC306 stay out of the tree.
+
+A later pass the same day is in `source-survey-2026-10-04b.md`. It does not reopen these three pointers or the negative finding on the two full texts.
