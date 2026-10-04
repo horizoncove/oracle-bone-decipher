@@ -6,7 +6,7 @@ import csv
 import json
 import re
 import unicodedata
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from difflib import ndiff
 from pathlib import Path
 from urllib.parse import urlparse
@@ -69,6 +69,10 @@ EVIDENCE_ITEM_FIELDS = (
     "checker",
     "login_required",
 )
+# 与 .github/labels.yml 的 scope-stale-review 同义。只作提醒，不表示降档。
+SCOPE_STALE_LABEL = "范围过期，需复查"
+SCOPE_STALE_GITHUB_LABEL = "scope-stale-review"
+_REJOIN_QUERY_DATE_RE = re.compile(r"缀合库查询日期\s*[:：]?\s*(\d{4}-\d{2}-\d{2})")
 PROPOSAL_REQUIRED_IDS = (
     "glyph_id",
     "evolution_chain",
@@ -722,6 +726,102 @@ def evidence_login_errors(evidence: object, level: object, label: str) -> list[s
             f"{label}: 含需登录出处的证据只能作个人线索，conclusion_level 最高到线索待查"
         )
     return errors
+
+
+def _as_calendar_date(value: date | datetime | str | None) -> date | None:
+    """把检索日期收成日历日。无法解析时返回 None，调用方不加提醒、也不改档。"""
+    if isinstance(value, datetime):
+        return value.date()
+    if isinstance(value, date):
+        return value
+    text = str(value or "").strip()
+    if len(text) < 10:
+        return None
+    try:
+        return date.fromisoformat(text[:10])
+    except ValueError:
+        return None
+
+
+def rejoin_query_date(corpus_scope: str) -> date | None:
+    """取出 corpus_scope 里的缀合库查询日期。未查询或没有 ISO 日期时返回 None。"""
+    match = _REJOIN_QUERY_DATE_RE.search(corpus_scope or "")
+    if not match:
+        return None
+    return _as_calendar_date(match.group(1))
+
+
+def scope_stale_reminder(
+    corpus_scope: str,
+    rejoin_search_date: date | datetime | str | None,
+) -> str | None:
+    """缀合库检索日期晚于 corpus_scope 所记缀合库查询日期时，返回提醒标签。
+
+    比较的是“缀合库查询日期”，不是同一串里的著录检索日期。
+    没有可比日期时返回 None。本函数不返回新的 conclusion_level 或 status_tier。
+    """
+    stored = rejoin_query_date(corpus_scope)
+    searched = _as_calendar_date(rejoin_search_date)
+    if stored is None or searched is None or searched <= stored:
+        return None
+    return SCOPE_STALE_LABEL
+
+
+def apply_scope_stale_reminder(
+    record: dict,
+    rejoin_search_date: date | datetime | str | None,
+) -> dict:
+    """返回副本。需要提醒时在 reminder_labels 里加上“范围过期，需复查”。
+
+    不改写调用方传入的记录，也不改 conclusion_level、status_tier 或 tier。
+    是否降档由复核者看过新增辞例后再决定。
+    """
+    updated = dict(record)
+    existing = record.get("reminder_labels")
+    labels = list(existing) if isinstance(existing, list) else []
+    label = scope_stale_reminder(str(record.get("corpus_scope") or ""), rejoin_search_date)
+    if label and label not in labels:
+        labels.append(label)
+    if labels:
+        updated["reminder_labels"] = labels
+    for key in ("conclusion_level", "status_tier", "tier"):
+        if key in record:
+            updated[key] = record[key]
+    return updated
+
+
+def repository_scope_reminders(
+    root: Path,
+    rejoin_search_date: date | datetime | str | None,
+) -> list[dict]:
+    """扫描试点日志，列出该加提醒的条目。只读，不把标签写回文件。"""
+    reminders = []
+    pilot = root / "pilot"
+    if not pilot.exists():
+        return reminders
+    for path in sorted(pilot.rglob("*.md")):
+        if path.name in {"_TEMPLATE.md", "README.md"}:
+            continue
+        try:
+            meta, _body = parse_front_matter(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, yaml.YAMLError):
+            continue
+        if not isinstance(meta, dict):
+            continue
+        if scope_stale_reminder(str(meta.get("corpus_scope") or ""), rejoin_search_date) is None:
+            continue
+        reminded = apply_scope_stale_reminder(meta, rejoin_search_date)
+        reminders.append(
+            {
+                "path": path.relative_to(root).as_posix(),
+                "glyph_id": meta.get("glyph_id"),
+                "reminder_labels": list(reminded.get("reminder_labels") or []),
+                "conclusion_level": meta.get("conclusion_level"),
+                "status_tier": meta.get("status_tier"),
+                "tier": meta.get("tier"),
+            }
+        )
+    return reminders
 
 
 def strip_fenced_code(text: str) -> str:

@@ -3,19 +3,31 @@
 from __future__ import annotations
 
 import copy
+import io
 import json
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.check_links import registry_urls, text_urls  # noqa: E402
+from scripts.check_links import (  # noqa: E402
+    DEFAULT_PROBE_LOG,
+    main as check_links_main,
+    probe_registered_urls,
+    registry_urls,
+    text_urls,
+)
 from scripts.obd.engine import (  # noqa: E402
+    SCOPE_STALE_GITHUB_LABEL,
+    SCOPE_STALE_LABEL,
     allocate_id,
+    apply_scope_stale_reminder,
     classify_counterexample,
     dual_report,
     is_reserved_test_id,
@@ -25,10 +37,12 @@ from scripts.obd.engine import (  # noqa: E402
     pointer_errors,
     publication_pilot_logs,
     qualification_for,
+    repository_scope_reminders,
     review_errors,
     transcription_errors,
     validate_repository,
 )
+from scripts.validate_all import main as validate_main  # noqa: E402
 from scripts.download_datasets import decision  # noqa: E402
 from tools.interface import build_machine_suggestion, validate_model_output  # noqa: E402
 
@@ -150,6 +164,93 @@ class PilotTests(unittest.TestCase):
         text = (ROOT / "pilot" / "_drill" / "OBD-900001.md").read_text(encoding="utf-8")
         errors = pilot_errors(Path("pilot/OBD-900001.md"), text)
         self.assertTrue(any("测试编号" in item for item in errors))
+
+    def test_later_rejoin_search_adds_reminder_without_downgrade(self):
+        record = {
+            "glyph_id": "OBD-900001",
+            "corpus_scope": "示例字编；检索日期 2026-10-04；缀合库查询日期 2026-10-02",
+            "conclusion_level": "候选假说",
+            "status_tier": "widely_undeciphered",
+            "tier": "widely_undeciphered",
+        }
+        result = apply_scope_stale_reminder(record, "2026-10-03")
+        self.assertEqual(result["reminder_labels"], [SCOPE_STALE_LABEL])
+        self.assertEqual(SCOPE_STALE_LABEL, "范围过期，需复查")
+        self.assertEqual(SCOPE_STALE_GITHUB_LABEL, "scope-stale-review")
+        self.assertEqual(result["conclusion_level"], "候选假说")
+        self.assertEqual(result["status_tier"], "widely_undeciphered")
+        self.assertEqual(result["tier"], "widely_undeciphered")
+        self.assertNotIn("reminder_labels", record)
+        self.assertEqual(record["conclusion_level"], "候选假说")
+        again = apply_scope_stale_reminder(result, "2026-10-03")
+        self.assertEqual(again["reminder_labels"], [SCOPE_STALE_LABEL])
+        self.assertEqual(again["conclusion_level"], "候选假说")
+
+    def test_rejoin_search_not_later_does_not_add_reminder(self):
+        record = {
+            "corpus_scope": "示例字编；检索日期 2026-10-01；缀合库查询日期 2026-10-04",
+            "conclusion_level": "候选假说",
+            "status_tier": "multiple_no_consensus",
+        }
+        for search in ("2026-10-04", "2026-10-03", "2026-10-01", "未查询", "2026-13-40"):
+            result = apply_scope_stale_reminder(record, search)
+            self.assertNotIn("reminder_labels", result, search)
+            self.assertEqual(result["conclusion_level"], "候选假说", search)
+            self.assertEqual(result["status_tier"], "multiple_no_consensus", search)
+        unqueried = dict(record)
+        unqueried["corpus_scope"] = "示例字编；检索日期 2026-10-02；缀合库查询日期：未查询"
+        result = apply_scope_stale_reminder(unqueried, "2026-10-05")
+        self.assertNotIn("reminder_labels", result)
+        self.assertEqual(result["conclusion_level"], "候选假说")
+        self.assertEqual(result["status_tier"], "multiple_no_consensus")
+
+    def test_repository_reminder_reads_logs_without_rewriting_them(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            pilot = root / "pilot"
+            pilot.mkdir()
+            stale = pilot / "stale.md"
+            current = pilot / "current.md"
+            body = "\n".join(
+                [
+                    "## 证据清单",
+                    "## 已排除的假说",
+                    "## 反证与回应",
+                    "## AI 线索",
+                    "## 当前结论与升级条件",
+                    "## 变更说明",
+                    "",
+                ]
+            )
+            stale.write_text(
+                "---\n"
+                'glyph_id: "OBD-900001"\n'
+                'corpus_scope: "示例字编；检索日期 2026-10-02；缀合库查询日期 2026-10-02"\n'
+                'conclusion_level: "候选假说"\n'
+                "tier: widely_undeciphered\n"
+                "---\n" + body,
+                encoding="utf-8",
+            )
+            current.write_text(
+                "---\n"
+                'glyph_id: "OBD-900002"\n'
+                'corpus_scope: "示例字编；检索日期 2026-10-01；缀合库查询日期 2026-10-04"\n'
+                'conclusion_level: "线索待查"\n'
+                "status_tier: widely_undeciphered\n"
+                "---\n" + body,
+                encoding="utf-8",
+            )
+            before = {path.name: path.read_bytes() for path in pilot.glob("*.md")}
+            reminders = repository_scope_reminders(root, "2026-10-03")
+            self.assertEqual([item["glyph_id"] for item in reminders], ["OBD-900001"])
+            self.assertEqual(reminders[0]["conclusion_level"], "候选假说")
+            self.assertEqual(reminders[0]["tier"], "widely_undeciphered")
+            self.assertEqual(reminders[0]["reminder_labels"], [SCOPE_STALE_LABEL])
+            self.assertEqual(
+                {path.name: path.read_bytes() for path in pilot.glob("*.md")},
+                before,
+            )
+            self.assertEqual(repository_scope_reminders(root, "2026-10-02"), [])
 
 
 class TranscriptionTests(unittest.TestCase):
@@ -292,6 +393,68 @@ class LinkDomainTests(unittest.TestCase):
             )
             self.assertEqual(registry_urls(root), ["https://example.com/plate"])
 
+    def test_probe_skips_hosts_that_are_not_allowlisted(self):
+        with patch("scripts.check_links.probe_url") as probe:
+            probed, failures = probe_registered_urls(
+                ["https://example.com/a"],
+                {"doi.org"},
+            )
+        probe.assert_not_called()
+        self.assertEqual(probed, [])
+        self.assertEqual(failures, [])
+
+    def test_probe_appends_jsonl_and_does_not_record_a_penalty(self):
+        self.assertEqual(DEFAULT_PROBE_LOG.as_posix(), "docs/link-probe-log.jsonl")
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "link-probe-log.jsonl"
+            with patch(
+                "scripts.check_links.registry_urls",
+                return_value=["https://doi.org/10.1000/example"],
+            ):
+                with patch(
+                    "scripts.check_links.probe_url",
+                    return_value="https://doi.org/10.1000/example -> timed out",
+                ):
+                    code = check_links_main(["--probe", "--record", str(path)])
+            self.assertEqual(code, 1)
+            lines = [line for line in path.read_text(encoding="utf-8").splitlines() if line]
+            self.assertEqual(len(lines), 1)
+            record = json.loads(lines[0])
+            self.assertEqual(record["failure_count"], 1)
+            self.assertEqual(record["urls"], ["https://doi.org/10.1000/example"])
+            self.assertIn("不处罚", record["note"])
+            self.assertNotIn("conclusion_level", record)
+            self.assertNotIn("status_tier", record)
+            first = lines[0]
+            with patch("scripts.check_links.registry_urls", return_value=[]):
+                with patch("scripts.check_links.probe_url") as probe:
+                    code = check_links_main(["--probe", "--record", str(path)])
+            self.assertEqual(code, 0)
+            probe.assert_not_called()
+            lines = [line for line in path.read_text(encoding="utf-8").splitlines() if line]
+            self.assertEqual(lines[0], first)
+            self.assertEqual(len(lines), 2)
+
+    def test_unlisted_domain_does_not_write_a_probe_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "link-probe-log.jsonl"
+            with patch(
+                "scripts.check_links.registry_urls",
+                return_value=["https://example.com/plate"],
+            ):
+                with patch("scripts.check_links.probe_url") as probe:
+                    code = check_links_main(["--probe", "--record", str(path)])
+            self.assertEqual(code, 1)
+            probe.assert_not_called()
+            self.assertFalse(path.exists())
+
+    def test_domain_check_without_probe_does_not_write_a_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "link-probe-log.jsonl"
+            code = check_links_main(["--record", str(path)])
+            self.assertEqual(code, 0)
+            self.assertFalse(path.exists())
+
 
 class OtherTests(unittest.TestCase):
     def test_download_policy(self):
@@ -316,8 +479,38 @@ class OtherTests(unittest.TestCase):
         self.assertIn("经验设定，待校准", text)
         self.assertIn("范围过期，需复查", text)
         self.assertIn("不自动降档", text)
+        self.assertIn("source-survey-2026-10-04b.md", text)
+        self.assertIn("link-probe-log.jsonl", text)
+        self.assertIn("scope-stale-review", text)
         for item in ("重复提案检索", "投票资格自动判定", "串通抽查", "译文同步"):
             self.assertIn(item, text)
+        labels = (ROOT / ".github" / "labels.yml").read_text(encoding="utf-8")
+        self.assertIn("name: scope-stale-review", labels)
+        self.assertIn("范围过期，需复查", labels)
+        self.assertNotIn("尚未自动", labels)
+
+    def test_rejoin_search_date_flag_does_not_rewrite_logs(self):
+        pilot = ROOT / "pilot"
+        before = {path: path.read_bytes() for path in pilot.rglob("*.md")}
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = validate_main(["--rejoin-search-date", "2026-10-03"])
+        self.assertEqual(code, 0)
+        text = buffer.getvalue()
+        self.assertIn("范围过期，需复查", text)
+        self.assertIn("OBD-900001", text)
+        self.assertIn("不自动降档", text)
+        self.assertIn("conclusion_level=证据不足暂不结论", text)
+        self.assertEqual(
+            {path: path.read_bytes() for path in pilot.rglob("*.md")},
+            before,
+        )
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = validate_main(["--rejoin-search-date", "2026-10-02"])
+        self.assertEqual(code, 0)
+        self.assertIn("没有晚于", buffer.getvalue())
+        self.assertNotIn("OBD-900001", buffer.getvalue())
 
 
 if __name__ == "__main__":
